@@ -1,4 +1,4 @@
-import playbackvideo from "../../../public/phehchan.mp4";
+import playbackvideo from "/phehchan.mp4";
 
 const PlayBack = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PrimaryButton from "../ui/PrimaryButton";
+import SecondaryButton from "../ui/SecondaryButton";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <div
-      className={`text-black shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 z-50 bg-white `}
+      className={`text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 z-50 `}
       // ${
       //   menu ? "bg-white bg-opacity-80" : "bg-transparent"
       // }
@@ -59,7 +59,7 @@ function NavBar() {
       </div>
       {menu && (
         <ul
-          className={`md:hidden md:space-x-4 bg-white divide-y-2 shadow-md divide-gray-100 text-lg absolute top-full w-full left-0 px-5 ${
+          className={`md:hidden md:space-x-4 text-slate-900 font-semibold bg-white divide-y-2 shadow-md divide-gray-100 text-lg absolute top-full w-full left-0 px-5 ${
             menu && "bg-white md:bg-transparent"
           }`}
         >
@@ -78,7 +78,7 @@ function NavBar() {
         <li className="py-2">Works</li>
       </ul>
       <div className="hidden md:block">
-        <PrimaryButton>Phehchan</PrimaryButton>
+        <SecondaryButton>Phehchan</SecondaryButton>
       </div>
     </div>
   );

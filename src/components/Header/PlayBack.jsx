@@ -4,7 +4,7 @@ const PlayBack = () => {
   return (
     <div className=" colorBg text-white h-screen animate-bgAnimation flex flex-col items-center justify-center bg-center bg-cover  ">
       <video
-        className="object-cover w-full h-full"
+        className="object-fill sm:object-cover sm:w-full h-dvh"
         src={playbackvideo}
         muted
         autoPlay

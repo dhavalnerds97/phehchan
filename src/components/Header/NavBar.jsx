@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PrimaryButton from "../ui/PrimaryButton";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -18,7 +19,7 @@ function NavBar() {
         backgroundColor: "rgba(255, 255, 255, 0.5)",
       }}
     >
-      <h1 className="font-semibold text-xl py-3">Phehchan</h1>
+      <h1 className="font-semibold text-xl py-4">Phehchan</h1>
       <div onClick={alterMenu} className="cursor-pointer md:hidden flex">
         {!menu ? (
           <svg
@@ -54,8 +55,8 @@ function NavBar() {
       </div>
       {menu && (
         <ul
-          className={`md:hidden md:space-x-4 text-lg absolute top-full w-full left-0 px-5 ${
-            menu && "bg-white bg-opacity-50 md:bg-transparent"
+          className={`md:hidden md:space-x-4 bg-white divide-y-2 shadow-md divide-gray-100 text-lg absolute top-full w-full left-0 px-5 ${
+            menu && "bg-white md:bg-transparent"
           }`}
         >
           <li className="py-2">Studio</li>
@@ -72,6 +73,7 @@ function NavBar() {
         <li className="py-2">Method</li>
         <li className="py-2">Works</li>
       </ul>
+      <PrimaryButton>Phehchan</PrimaryButton>
     </div>
   );
 }

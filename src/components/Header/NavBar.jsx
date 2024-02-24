@@ -22,7 +22,7 @@ function NavBar() {
     >
       <div className="flex flex-col py-3">
         <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
-        <p className="text-xs">brand solutions</p>
+        <p className="text-xs">Brand Solutions</p>
       </div>
       <div onClick={alterMenu} className="cursor-pointer md:hidden flex">
         {!menu ? (

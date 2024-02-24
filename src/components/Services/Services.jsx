@@ -42,8 +42,8 @@ const features = [
 const Services = () => {
   return (
     <div className="p-4 md:p-16 flex flex-col bg-gray-50">
-      <div className="pb-12 gap-4 flex justify-between items-center">
-        <h2 className="font-bold text-2xl md:text-4xl max-w-2xl">
+      <div className="pb-12 gap-4 flex max-sm:flex-col text-center md:text-left md:justify-between items-center">
+        <h2 className="font-bold text-2xl px-8 md:p-0 md:text-4xl max-w-2xl">
           Empowering your brand&apos;s success in a competitive world
         </h2>
         <p className="cursor-pointer font-bold">BOOK A DISCOVERY CALL</p>

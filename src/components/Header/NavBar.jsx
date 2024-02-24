@@ -11,15 +11,19 @@ function NavBar() {
 
   return (
     <div
-      className={`text-black shadow-md flex justify-between items-center md:space-x-5 sticky px-12 top-0 z-50 ${
-        menu ? "bg-white bg-opacity-80" : "bg-transparent"
-      }`}
-      style={{
-        backdropFilter: "blur(8px)",
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
-      }}
+      className={`text-black shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 z-50 bg-white `}
+      // ${
+      //   menu ? "bg-white bg-opacity-80" : "bg-transparent"
+      // }
+      // style={{
+      //   backdropFilter: "blur(8px)",
+      //   backgroundColor: "rgba(255, 255, 255, 0.5)",
+      // }}
     >
-      <h1 className="font-semibold text-xl py-4">Phehchan</h1>
+      <div className="flex flex-col py-3">
+        <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
+        <p className="text-xs">brand solutions</p>
+      </div>
       <div onClick={alterMenu} className="cursor-pointer md:hidden flex">
         {!menu ? (
           <svg
@@ -66,14 +70,16 @@ function NavBar() {
         </ul>
       )}
       <ul
-        className={`hidden font-bold capitalize md:flex md:space-x-12 text-lg items-center`}
+        className={`hidden font-semibold capitalize md:flex md:space-x-8 lg:space-x-12 text-lg items-center`}
       >
         <li className="py-2">Studio</li>
         <li className="py-2">Services</li>
         <li className="py-2">Method</li>
         <li className="py-2">Works</li>
       </ul>
-      <PrimaryButton>Phehchan</PrimaryButton>
+      <div className="hidden md:block">
+        <PrimaryButton>Phehchan</PrimaryButton>
+      </div>
     </div>
   );
 }

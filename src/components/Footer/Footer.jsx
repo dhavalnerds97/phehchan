@@ -1,16 +1,15 @@
 const Footer = () => {
   return (
-    <div className="flex px-12 gap-6 justify-between items-center bg-black">
+    <div className="flex px-4 md:px-12 gap-12 justify-between items-center bg-black">
       <div>
         <p className="text-white">
-          Copyright © {new Date().getFullYear()} Phehchan.
-          All rights reserved.
+          Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p>
       </div>
-      <div className="flex justify-center items-center space-x-2 mt-14 mb-10">
+      <div className="flex justify-center items-center space-x-2 my-10">
         <a href="https://www.twitter.com/" target="_blank">
           <svg
-            className="w-8 h-8 md:w-12 md:h-12  fill-white hover:fill-slate-700 transition-colors duration-700"
+            className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -19,7 +18,7 @@ const Footer = () => {
         </a>
         <a href="https://www.instagram.com/" target="_blank">
           <svg
-            className=" w-8 h-8 md:w-12 md:h-12 fill-white hover:fill-slate-700 transition-colors duration-700"
+            className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -30,7 +29,7 @@ const Footer = () => {
         </a>
         <a href="https://www.facebook.com/" target="_blank">
           <svg
-            className=" w-8 h-8 md:w-12 md:h-12 fill-white hover:fill-slate-700 transition-colors duration-700"
+            className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -41,7 +40,7 @@ const Footer = () => {
         </a>
         <a href="https://www.linkedin.com/" target="_blank">
           <svg
-            className=" w-8 h-8 md:w-12 md:h-12 fill-white hover:fill-slate-700 transition-colors duration-700"
+            className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >

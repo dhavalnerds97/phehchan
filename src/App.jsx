@@ -30,7 +30,7 @@ const App = () => {
       const timer = setTimeout(() => {
         setRemovePlayback(true);
         smoothScrollToNextComponent();
-      }, 5000); // Wait for 5 seconds
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [videoLoaded, removePlayback]);
@@ -62,13 +62,23 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="md:flex md:overflow-x-auto md:overflow-y-hidden md:whitespace-nowrap md:w-dvw md:h-screen">
       {!removePlayback && <PlayBack ref={playbackRef} />}
-      <NavBar id="navbar" />
-      <Hero />
-      <Services />
-      <Reviews />
-      <Footer />
+      <div className="md:flex-shrink-0">
+        <NavBar id="navbar" />
+      </div>
+      <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <Hero />
+      </div>
+      <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <Services />
+      </div>
+      <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <Reviews />
+      </div>
+      <div className="md:w-screen md:h-screen">
+        <Footer />
+      </div>
     </div>
   );
 };

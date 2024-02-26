@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <div
-      className={`text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 z-50 `}
+      className={`text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 md:absolute md:w-screen left-0 z-50 `}
       // ${
       //   menu ? "bg-white bg-opacity-80" : "bg-transparent"
       // }

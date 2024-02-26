@@ -41,7 +41,7 @@ const features = [
 
 const Services = () => {
   return (
-    <div className="p-4 md:p-16 md:pt-24 flex flex-col bg-gray-50 md:bg-gray-100 md:h-screen">
+    <div className="p-4 md:p-16 md:pt-24 flex flex-col bg-gray-50 md:bg-gray-100 md:h-screen md:justify-center ">
       <div className="pb-8 gap-4 flex max-sm:flex-col md:flex-col lg:justify-between items-center lg:flex-row">
         <h2 className="font-bold text-wrap text-2xl px-8 md:p-0 md:text-4xl max-w-2xl">
           Empowering your brand&apos;s success in a competitive world

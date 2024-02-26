@@ -29,7 +29,6 @@ const App = () => {
     if (videoLoaded && !removePlayback) {
       const timer = setTimeout(() => {
         setRemovePlayback(true);
-        smoothScrollToNextComponent();
       }, 3000);
       return () => clearTimeout(timer);
     }
@@ -39,31 +38,13 @@ const App = () => {
     setVideoLoaded(true);
   };
 
-  const smoothScrollToNextComponent = () => {
-    const nextComponent = document.getElementById("navbar"); // ID of the next component
-    if (nextComponent) {
-      const targetPosition = nextComponent.offsetTop;
-      const startPosition = window.pageYOffset;
-      const distance = targetPosition - startPosition;
-      const duration = 1000; // Duration of the scroll animation in milliseconds
-
-      let start = null;
-      const step = (timestamp) => {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const percentage = Math.min(progress / duration, 1);
-        window.scrollTo(0, startPosition + distance * percentage);
-        if (progress < duration) {
-          window.requestAnimationFrame(step);
-        }
-      };
-      window.requestAnimationFrame(step);
-    }
-  };
-
   return (
     <div className="md:flex md:overflow-x-auto md:overflow-y-hidden md:whitespace-nowrap md:w-dvw md:h-screen">
-      {!removePlayback && <PlayBack ref={playbackRef} />}
+      {!removePlayback && (
+        <div className="md:w-screen md:h-screen md:flex-shrink-0">
+          <PlayBack ref={playbackRef} />
+        </div>
+      )}
       <div className="md:flex-shrink-0">
         <NavBar id="navbar" />
       </div>

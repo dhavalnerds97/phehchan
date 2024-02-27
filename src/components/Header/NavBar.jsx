@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SecondaryButton from "../ui/SecondaryButton";
 
 function NavBar() {
@@ -10,16 +11,7 @@ function NavBar() {
   }
 
   return (
-    <div
-      className={`text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 md:absolute md:w-screen left-0 z-50 `}
-      // ${
-      //   menu ? "bg-white bg-opacity-80" : "bg-transparent"
-      // }
-      // style={{
-      //   backdropFilter: "blur(8px)",
-      //   backgroundColor: "rgba(255, 255, 255, 0.5)",
-      // }}
-    >
+    <div className="text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 md:absolute md:w-screen left-0 z-50">
       <div className="flex flex-col py-3">
         <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
         <p className="text-xs">Brand Solutions</p>
@@ -57,21 +49,22 @@ function NavBar() {
           </svg>
         )}
       </div>
-      {menu && (
-        <ul
-          className={`md:hidden md:space-x-4 text-slate-900 font-semibold bg-white divide-y-2 shadow-md divide-gray-100 text-lg absolute top-full w-full left-0 px-5 ${
-            menu && "bg-white md:bg-transparent"
-          }`}
-        >
-          <li className="py-2">Studio</li>
-          <li className="py-2">Services</li>
-          <li className="py-2">Method</li>
-          <li className="py-2">Works</li>
-        </ul>
-      )}
-      <ul
-        className={`hidden font-semibold capitalize md:flex md:space-x-8 lg:space-x-12 text-lg items-center`}
-      >
+      <AnimatePresence>
+        {menu && (
+          <motion.ul
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "-100%" }}
+            className="md:hidden md:space-x-4 text-slate-900 font-semibold bg-white divide-y-2 shadow-md divide-gray-100 text-lg absolute top-full w-full left-0 px-5"
+          >
+            <li className="py-2">Studio</li>
+            <li className="py-2">Services</li>
+            <li className="py-2">Method</li>
+            <li className="py-2">Works</li>
+          </motion.ul>
+        )}
+      </AnimatePresence>
+      <ul className="hidden font-semibold capitalize md:flex md:space-x-8 lg:space-x-12 text-lg items-center">
         <li className="py-2">Studio</li>
         <li className="py-2">Services</li>
         <li className="py-2">Method</li>

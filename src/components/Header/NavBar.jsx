@@ -1,17 +1,16 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import SecondaryButton from "../ui/SecondaryButton";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
 
-  // Altering menu
   function alterMenu() {
     setMenu(!menu);
   }
 
   return (
-    <div className="text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 md:absolute md:w-screen left-0 z-50">
+    <div className="text-amber-400 bg-slate-900 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-16 top-0 md:absolute md:w-screen left-0 z-40">
       <div className="flex flex-col py-3">
         <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
         <p className="text-xs">Brand Solutions</p>

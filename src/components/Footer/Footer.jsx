@@ -6,7 +6,7 @@ const Footer = () => {
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p>
       </div>
-      <div className="flex justify-center items-center space-x-2 md:grid md:grid-cols-2 md:gap-4 my-10">
+      <div className="flex justify-center items-center space-x-2 md:grid md:grid-cols-2 md:gap-4">
         <a href="https://www.twitter.com/" target="_blank">
           <svg
             className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"

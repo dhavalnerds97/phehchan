@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Header/Hero";
 import NavBar from "./components/Header/NavBar";
@@ -31,9 +31,12 @@ const App = () => {
   useEffect(() => {
     if (videoLoaded && !removePlayback) {
       const timer = setTimeout(() => {
-        setRemovePlayback(true);
+        setTimeout(() => {
+          setRemovePlayback(true);
+          smoothDisappearPlayback();
+        }, 400);
         smoothScrollToNextComponent();
-      }, 3000);
+      }, 2500);
       return () => clearTimeout(timer);
     }
   }, [videoLoaded, removePlayback]);
@@ -42,18 +45,22 @@ const App = () => {
     setVideoLoaded(true);
   };
 
+  const smoothDisappearPlayback = async () => {
+    await controls.start({ opacity: 0, transition: { duration: 0.5 } });
+  };
+
   const smoothScrollToNextComponent = () => {
-    controls.start({ x: containerRef.current.offsetWidth });
+    controls.start({ x: -containerRef.current.offsetWidth });
   };
 
   const handleWheel = (e) => {
     const delta = Math.max(-1, Math.min(1, e.deltaY));
-    containerRef.current.scrollLeft -= delta * 50;
+    containerRef.current.scrollLeft -= delta * 40;
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-      e.preventDefault(); // Prevent default page scrolling
+      e.preventDefault();
       const delta = e.key === "ArrowDown" ? -50 : 50;
       containerRef.current.scrollLeft -= delta;
     }
@@ -65,7 +72,7 @@ const App = () => {
       onWheel={handleWheel}
       onKeyDown={handleKeyDown}
       ref={containerRef}
-      tabIndex={0} // Make the container focusable to capture key events
+      tabIndex={0}
       style={{ overflow: "hidden" }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -74,21 +81,22 @@ const App = () => {
       {!removePlayback && (
         <motion.div
           className="md:w-screen md:h-screen md:flex-shrink-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          initial={{ opacity: 1 }}
+          animate={controls}
         >
           <PlayBack ref={playbackRef} />
         </motion.div>
       )}
-      <motion.div
-        className="md:flex-shrink-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <NavBar id="navbar" />
-      </motion.div>
+      {removePlayback && (
+        <motion.div
+          className="md:flex-shrink-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <NavBar id="navbar" />
+        </motion.div>
+      )}
       <motion.div
         className="md:w-screen md:h-screen md:flex-shrink-0"
         initial={{ opacity: 0, scale: 0.8 }}

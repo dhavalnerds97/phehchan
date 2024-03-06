@@ -55,7 +55,7 @@ const App = () => {
 
   const handleWheel = (e) => {
     const delta = Math.max(-1, Math.min(1, e.deltaY));
-    containerRef.current.scrollLeft -= delta * 40;
+    containerRef.current.scrollLeft -= delta * 50;
   };
 
   const handleKeyDown = (e) => {
@@ -67,69 +67,71 @@ const App = () => {
   };
 
   return (
-    <motion.div
-      className="md:flex md:overflow-x-auto md:overflow-y-hidden md:whitespace-nowrap md:w-dvw md:h-screen"
-      onWheel={handleWheel}
-      onKeyDown={handleKeyDown}
-      ref={containerRef}
-      tabIndex={0}
-      style={{ overflow: "hidden" }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      {!removePlayback && (
-        <motion.div
-          className="md:w-screen md:h-screen md:flex-shrink-0"
-          initial={{ opacity: 1 }}
-          animate={controls}
-        >
-          <PlayBack ref={playbackRef} />
-        </motion.div>
-      )}
-      {removePlayback && (
-        <motion.div
-          className="md:flex-shrink-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <NavBar id="navbar" />
-        </motion.div>
-      )}
+    <>
       <motion.div
-        className="md:w-screen md:h-screen md:flex-shrink-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <Hero />
-      </motion.div>
-      <motion.div
-        className="md:w-screen md:h-screen md:flex-shrink-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <Services />
-      </motion.div>
-      <motion.div
-        className="md:w-screen md:h-screen md:flex-shrink-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <Reviews />
-      </motion.div>
-      <motion.div
-        className="md:w-screen md:h-screen"
+        className="md:flex md:overflow-x-auto md:overflow-y-hidden md:whitespace-nowrap md:w-dvw md:h-screen"
+        onWheel={handleWheel}
+        onKeyDown={handleKeyDown}
+        ref={containerRef}
+        tabIndex={0}
+        style={{ overflow: "hidden" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1 }}
       >
-        <Footer />
+        {!removePlayback && (
+          <motion.div
+            className="md:w-screen md:h-screen md:flex-shrink-0"
+            initial={{ opacity: 1 }}
+            animate={controls}
+          >
+            <PlayBack ref={playbackRef} />
+          </motion.div>
+        )}
+        {removePlayback && (
+          <motion.div
+            className="md:flex-shrink-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <NavBar id="navbar" />
+          </motion.div>
+        )}
+        <motion.div
+          className="md:w-screen md:h-screen md:flex-shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <Hero />
+        </motion.div>
+        <motion.div
+          className="md:w-screen md:h-screen md:flex-shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <Services />
+        </motion.div>
+        <motion.div
+          className="md:w-screen md:h-screen md:flex-shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <Reviews />
+        </motion.div>
+        <motion.div
+          className="md:w-screen md:h-screen"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <Footer />
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 };
 

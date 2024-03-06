@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex px-4 md:w-40 md:h-screen md:p-6 md:pt-20 gap-12 justify-between items-center md:flex-col bg-black">
+    <div className="flex px-4 md:w-40 md:h-screen md:p-6 md:pt-20 gap-12 justify-between items-center md:flex-col bg-slate-950">
       <div>
         <p className="text-white text-wrap">
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.

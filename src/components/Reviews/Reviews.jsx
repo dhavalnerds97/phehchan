@@ -24,7 +24,7 @@ const testimonial = [
 
 const Reviews = () => {
   return (
-    <div className="p-4 md:p-16 flex flex-col md:h-screen md:justify-center md:items-center">
+    <div className="p-4 md:p-16 text-slate-800 flex flex-col md:h-screen md:justify-center md:items-center">
       <div className="pb-12 gap-2 flex flex-col items-center">
         <h2 className="font-bold text-3xl md:text-4xl max-w-2xl">
           Words of Appreciation:

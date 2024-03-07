@@ -1,19 +1,19 @@
 import { forwardRef } from "react";
-import playbackvideo from "/phehchan.mp4";
 
 const PlayBack = forwardRef((props, ref) => {
   return (
-    <div className="text-white md:w-screen md:h-screen h-dvh animate-bgAnimation flex object-fill sm:object-cover items-center justify-center bg-center bg-cover">
+    <div className="text-white w-screen h-screen flex items-center justify-center bg-center object-cover">
       <video
         ref={ref}
-        className="object-fill sm:object-cover sm:w-full h-dvh"
-        src={playbackvideo}
+        className="sm:object-cover object-fill max-w-3xl bg-cover sm:max-w-full sm:w-full h-full"
+        src="/phehchan.mp4"
         muted
         autoPlay
         loop
         playsInline
       >
-        <source src={playbackvideo} type="video/mp4" />
+        <source src="/phehchan.webm" type="video/webm" />
+        <source src="/phehchan.webm" type="video/webm" />
       </video>
     </div>
   );

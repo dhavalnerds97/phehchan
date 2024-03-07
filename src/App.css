@@ -49,10 +49,10 @@
     text-decoration: none;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     
-    -webkit-transition:   0.35s ease all;
-    -moz-transition:      0.35s ease all;
-    -o-transition:        0.35s ease all;
-    transition:           0.35s ease all;
+    -webkit-transition:   0.25s ease all;
+    -moz-transition:      0.25s ease all;
+    -o-transition:        0.25s ease all;
+    transition:           0.25s ease all;
   }
   
   .item-hover:hover {

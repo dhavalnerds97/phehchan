@@ -34,9 +34,9 @@ const App = () => {
         setTimeout(() => {
           setRemovePlayback(true);
           smoothDisappearPlayback();
-        }, 400);
+        }, 200);
         smoothScrollToNextComponent();
-      }, 2500);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [videoLoaded, removePlayback]);
@@ -98,38 +98,18 @@ const App = () => {
             <NavBar id="navbar" />
           </motion.div>
         )}
-        <motion.div
-          className="md:w-screen md:h-screen md:flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        <div className="md:w-screen md:h-screen md:flex-shrink-0">
           <Hero />
-        </motion.div>
-        <motion.div
-          className="md:w-screen md:h-screen md:flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        </div>
+        <div className="md:w-screen md:h-screen md:flex-shrink-0">
           <Services />
-        </motion.div>
-        <motion.div
-          className="md:w-screen md:h-screen md:flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        </div>
+        <div className="md:w-screen md:h-screen md:flex-shrink-0">
           <Reviews />
-        </motion.div>
-        <motion.div
-          className="md:w-screen md:h-screen"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        </div>
+        <div className="md:w-screen md:h-screen">
           <Footer />
-        </motion.div>
+        </div>
       </motion.div>
     </>
   );

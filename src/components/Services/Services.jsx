@@ -5,7 +5,7 @@ const features = [
   {
     title: "Website Development",
     description:
-      "We have designed hundereds of websites for clients in many different industries. We’ve had the opportunity to work with some great clients in Toronto, The United States of America, South America, Asia and Globally.",
+      "We have designed hundereds of websites for clients in many different industries. We’ve had the opportunity to work with some great clients in The United States of America, Asia and Globally.",
     icon: "bx:bxs-briefcase",
   },
   {
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Blog Management",
     description:
-      "Leave your blog in our capable hands. Our blog management services ensure consistent, compelling, and informative content that engages readers and keeps them coming back. Whether it's industry news, insights, or captivating stories, we've got you covered.",
+      "Leave your blog in our capable hands. Our blog management services ensure consistent, compelling, and informative content that engages readers and keeps them coming back.",
     icon: "bx:bxs-bot",
   },
   {
@@ -42,9 +42,9 @@ const features = [
 
 const Services = () => {
   return (
-    <div className="p-4 md:p-16 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r to-neutral-300 from-white md:h-screen md:justify-center ">
-      <div className="pb-8 gap-4 flex max-sm:flex-col md:flex-col lg:justify-between items-center lg:flex-row">
-        <h2 className="font-bold text-wrap text-2xl px-8 md:p-0 md:text-4xl max-w-2xl">
+    <div className="p-4 lg:p-16 lg:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r to-neutral-300 from-white md:h-screen md:justify-center ">
+      <div className="lg:pb-8 pb-2 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row">
+        <h2 className="font-bold text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Empowering your brand&apos;s success in a competitive world
         </h2>
         <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>

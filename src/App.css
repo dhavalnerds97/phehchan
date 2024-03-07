@@ -170,6 +170,53 @@ See a production optimized version here: https://charmui.com
     background-image: var(--stripesDark), var(--rainbow);
 }
 
+body {
+  --white: #888888;
+  --background: var(--blue);
+  --accent: var(--white);
+}
+@media only screen and (min-width: 480px) {
+  #progress {
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+    transform: rotate(-90deg);
+  }
+
+  circle {
+    stroke-dashoffset: 0;
+    stroke-width: 15%;
+    fill: none;
+  }
+
+  .bg {
+    stroke: var(--accent);
+    opacity: 0.3;
+  }
+
+  #progress .indicator {
+    stroke: var(--accent);
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #fff3;
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #fff3;
+  }
+}
+
+
+/* 
 .colorBg {
   background: linear-gradient(
       136deg,
@@ -382,4 +429,4 @@ See a production optimized version here: https://charmui.com
     696px 1654px #fff, 1144px 60px #fff;
   height: 1px;
   width: 1px;
-}
+} */

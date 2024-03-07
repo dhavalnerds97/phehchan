@@ -10,7 +10,7 @@ function NavBar() {
   }
 
   return (
-    <div className="text-amber-400 bg-gradient-to-b to-gray-800 from-slate-950 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-20 top-0 md:absolute md:w-screen left-0 z-40">
+    <div className="text-amber-400 bg-gradient-to-b to-gray-800 from-slate-950 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-8 lg:px-20 top-0 md:absolute md:w-screen left-0 z-40">
       <div className="flex flex-col h-16 py-3">
         <img src={LOGO} alt="logo" className="h-full  object-cover" width={240}/>
         {/* <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
@@ -64,7 +64,7 @@ function NavBar() {
           </motion.ul>
         )}
       </AnimatePresence>
-      <ul className="hidden font-semibold font-custom capitalize md:flex md:space-x-8 text-lg items-center">
+      <ul className="hidden font-semibold font-custom capitalize md:flex md:space-x-4 lg:space-x-8 text-lg items-center">
         <li className="py-2 item-hover" data-text="Studio" >Studio</li>
         <li className="py-2 item-hover" data-text="Services" >Services</li>
         <li className="py-2 item-hover" data-text="Method" >Method</li>

@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Header/Hero";
@@ -13,6 +13,7 @@ const App = () => {
   const playbackRef = useRef(null);
   const containerRef = useRef(null);
   const controls = useAnimation();
+  const { scrollXProgress } = useScroll({ container: containerRef });
 
   useEffect(() => {
     let videoElement = null;
@@ -55,7 +56,7 @@ const App = () => {
 
   const handleWheel = (e) => {
     const delta = Math.max(-1, Math.min(1, e.deltaY));
-    containerRef.current.scrollLeft -= delta * 50;
+    containerRef.current.scrollLeft += delta * 50;
   };
 
   const handleKeyDown = (e) => {
@@ -111,6 +112,17 @@ const App = () => {
           <Footer />
         </div>
       </motion.div>
+      <svg id="progress" width="100" height="100" className="hidden md:block" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
+        <motion.circle
+          cx="50"
+          cy="50"
+          r="30"
+          pathLength="1"
+          className="indicator"
+          style={{ pathLength: scrollXProgress }}
+        />
+      </svg>
     </>
   );
 };

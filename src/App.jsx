@@ -73,7 +73,7 @@ const App = () => {
   return (
     <>
       <motion.div
-        className="md:flex md:overflow-x-auto md:overflow-y-hidden md:whitespace-nowrap md:w-dvw md:h-screen"
+        className="xl:flex xl:overflow-x-auto xl:overflow-y-hidden xl:whitespace-nowrap xl:w-dvw xl:h-screen"
         onWheel={handleWheel}
         onKeyDown={handleKeyDown}
         ref={containerRef}
@@ -85,7 +85,7 @@ const App = () => {
       >
         {!removePlayback && (
           <motion.div
-            className="md:w-screen md:h-screen md:flex-shrink-0"
+            className="xl:w-screen xl:h-screen xl:flex-shrink-0"
             initial={{ opacity: 1 }}
             animate={controls}
           >
@@ -94,7 +94,7 @@ const App = () => {
         )}
         {removePlayback && (
           <motion.div
-            className="md:flex-shrink-0"
+            className="xl:flex-shrink-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -102,16 +102,16 @@ const App = () => {
             <NavBar id="navbar" />
           </motion.div>
         )}
-        <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
           <Hero />
         </div>
-        <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
           <Services />
         </div>
-        <div className="md:w-screen md:h-screen md:flex-shrink-0">
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
           <Reviews />
         </div>
-        <div className="md:w-screen md:h-screen">
+        <div className="xl:w-screen xl:h-screen">
           <Footer />
         </div>
       </motion.div>
@@ -119,7 +119,7 @@ const App = () => {
         id="progress"
         width="100"
         height="100"
-        className="hidden md:block"
+        className="hidden xl:block"
         viewBox="0 0 100 100"
       >
         <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />

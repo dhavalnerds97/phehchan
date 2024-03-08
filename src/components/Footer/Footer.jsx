@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
-    <div className="flex px-4 py-2 md:w-40 md:h-screen md:p-6 md:pt-20 gap-12 justify-between md:flex-col bg-slate-950">
-      <div>
+    <div className="flex px-4 py-2 w-screen xl:h-screen xl:w-40 md:p-6 xl:pt-20 gap-12 justify-between xl:flex-col bg-slate-950">
+      <div className="flex items-center">
         <p className="text-white text-wrap">
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p>
       </div>
-      <div className="flex justify-center items-center space-x-2 md:flex-col md:items-end md:gap-2">
+      <div className="flex justify-center items-center space-x-2 xl:flex-col md:items-end md:gap-2">
         <a href="https://www.twitter.com/" target="_blank">
           <svg
             className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"

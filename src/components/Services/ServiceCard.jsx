@@ -5,7 +5,7 @@ const ServiceCard = (props) => {
 
   return (
     <div
-      className={`border drop-shadow-xl p-6 sm:p-3 lg:p-6 rounded-lg text-wrap ${
+      className={`border drop-shadow-xl p-6 sm:p-3 lg:p-6 rounded-lg text-wrap transition duration-100 ease-in-out ${
         darkMode
           ? "bg-gray-950 text-white shadow-lg shadow-gray-700 border-gray-700"
           : "bg-white text-slate-700"

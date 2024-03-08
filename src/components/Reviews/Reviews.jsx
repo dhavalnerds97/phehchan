@@ -1,3 +1,4 @@
+import { useTheme } from "../../utils/ThemeContext";
 import ReviewCard from "./ReviewCard";
 
 const testimonial = [
@@ -22,8 +23,15 @@ const testimonial = [
 ];
 
 const Reviews = () => {
+  const { darkMode } = useTheme();
   return (
-    <div className="p-4 lg:p-16 bg-gradient-to-l to-neutral-300 from-white text-slate-800 flex flex-col md:h-screen md:justify-center md:items-center">
+    <div
+      className={`p-4 lg:p-16 bg-gradient-to-l flex flex-col md:h-screen md:justify-center md:items-center ${
+        darkMode
+          ? "to-gray-900 from-slate-950 text-white"
+          : "to-neutral-300 from-white text-slate-800"
+      }`}
+    >
       <div className="pb-12 gap-2 flex flex-col items-center">
         <h2 className="font-bold text-3xl md:text-4xl max-w-2xl">
           Words of Appreciation:

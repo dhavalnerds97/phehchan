@@ -1,4 +1,5 @@
-import PrimaryButton from '../ui/PrimaryButton';
+import { useTheme } from "../../utils/ThemeContext";
+import PrimaryButton from "../ui/PrimaryButton";
 import ServiceCard from "./ServiceCard";
 
 const features = [
@@ -41,15 +42,23 @@ const features = [
 ];
 
 const Services = () => {
+  const { darkMode } = useTheme();
+
   return (
-    <div className="p-4 lg:p-16 lg:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r to-neutral-300 from-white md:h-screen md:justify-center ">
-      <div className="lg:pb-8 pb-2 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row">
+    <div
+      className={`p-4 lg:p-16 lg:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r to-neutral-300 from-white md:h-screen md:justify-center  ${
+        darkMode
+          ? "to-slate-900 from-gray-950 text-white"
+          : "to-neutral-300 from-white text-slate-800"
+      }`}
+    >
+      <div className="lg:pb-8 pb-2 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
         <h2 className="font-bold text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Empowering your brand&apos;s success in a competitive world
         </h2>
         <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-12 pb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-12 pb-6 ">
         {features.map((item, index) => (
           <ServiceCard key={index} data={item} />
         ))}

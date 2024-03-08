@@ -1,11 +1,13 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Header/Hero";
 import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
 import Reviews from "./components/Reviews/Reviews";
 import Services from "./components/Services/Services";
+import { useTheme } from "./utils/ThemeContext";
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -14,6 +16,7 @@ const App = () => {
   const containerRef = useRef(null);
   const controls = useAnimation();
   const { scrollXProgress } = useScroll({ container: containerRef });
+  const { darkMode } = useTheme();
 
   useEffect(() => {
     let videoElement = null;
@@ -112,7 +115,13 @@ const App = () => {
           <Footer />
         </div>
       </motion.div>
-      <svg id="progress" width="100" height="100" className="hidden md:block" viewBox="0 0 100 100">
+      <svg
+        id="progress"
+        width="100"
+        height="100"
+        className="hidden md:block"
+        viewBox="0 0 100 100"
+      >
         <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
         <motion.circle
           cx="50"

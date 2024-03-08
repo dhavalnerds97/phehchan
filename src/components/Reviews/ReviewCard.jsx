@@ -5,10 +5,10 @@ const ReviewCard = ({ data }) => {
 
   return (
     <div
-      className={`p-6 md:p-8 border md:h-auto rounded-lg shadow-lg hover:shadow-xl transform bg-white hover:scale-105 transition duration-300 ease-in-out ${
+      className={`p-6 md:p-8 border md:h-auto rounded-lg shadow-lg hover:shadow-xl transform  hover:scale-105 transition duration-300 ease-in-out ${
         darkMode
           ? "bg-gray-950 text-white shadow-lg shadow-gray-700 border-gray-700"
-          : ""
+          : "bg-white text-slate-700"
       }`}
     >
       <div className="flex gap-4 py-2 md:pb-6 items-center">

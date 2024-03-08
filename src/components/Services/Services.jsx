@@ -46,7 +46,7 @@ const Services = () => {
 
   return (
     <div
-      className={`p-4 lg:p-16 lg:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r to-neutral-300 from-white md:h-screen md:justify-center  ${
+      className={`p-4 lg:p-16 lg:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r md:h-screen md:justify-center  ${
         darkMode
           ? "to-slate-900 from-gray-950 text-white"
           : "to-neutral-300 from-white text-slate-800"

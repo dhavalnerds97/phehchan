@@ -1,12 +1,19 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import ApproachObjCapab from "./components/About/ApproachObjCapab";
+import CelebsRecs from "./components/About/CelebsRecs";
+import KeyContent from "./components/About/KeyContent";
+import Recommendations from "./components/About/Recommendations";
+import WhyUs from "./components/About/WhyUs";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Header/Hero";
 import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
 import Reviews from "./components/Reviews/Reviews";
+import Stakeholders from "./components/Reviews/Stakeholders";
 import Services from "./components/Services/Services";
+import Team from "./components/Team/Team";
 import { useTheme } from "./utils/ThemeContext";
 
 const App = () => {
@@ -110,6 +117,27 @@ const App = () => {
         </div>
         <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
           <Reviews />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <Team />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <ApproachObjCapab />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <Stakeholders />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <KeyContent />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <Recommendations />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <CelebsRecs />
+        </div>
+        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+          <WhyUs />
         </div>
         <div className="xl:w-screen xl:h-screen">
           <Footer />

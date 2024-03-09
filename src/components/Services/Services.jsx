@@ -2,42 +2,41 @@ import { useTheme } from "../../utils/ThemeContext";
 import PrimaryButton from "../ui/PrimaryButton";
 import ServiceCard from "./ServiceCard";
 
-const features = [
+const process = [
   {
-    title: "Website Development",
+    title: "Kick-off",
     description:
-      "We have designed hundereds of websites for clients in many different industries. We’ve had the opportunity to work with some great clients in The United States of America, Asia and Globally.",
+      "Introduction and alignment to make sure you’re okay with how much we cost",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "App Development",
+    title: "Concepts",
     description:
-      "From intuitive user interfaces to seamless functionality, our team crafts innovative mobile apps that cater to your audience's needs. Let's bring your app vision to life.",
-    icon: "bx:bxs-window-alt",
+      "Present the output of our many, many brainstorm sessions and hope you don’t have major revision requests",
   },
   {
-    title: "Product Management",
+    title: "Delivery & Execution",
     description:
-      "We can help you manage your products effectively, ensuring that they meet the needs of your target audience and contribute to your business's success.",
+      "Select one concept and refine into final delivery and then execute the same on multiple channels",
     icon: "bx:bxs-data",
   },
+];
+const principles = [
   {
-    title: "Blog Management",
-    description:
-      "Leave your blog in our capable hands. Our blog management services ensure consistent, compelling, and informative content that engages readers and keeps them coming back.",
-    icon: "bx:bxs-bot",
+    title: "Think",
+    description: "We spend majority of our time on the drawing board.",
   },
   {
-    title: "SEO",
-    description:
-      "Search Engine Optimization (SEO) is a time-taking process that requires a lot of pampering and caressing to make a website rank higher on the web jungle. We are experts in mastering SEO.",
-    icon: "bx:bxs-file-find",
+    title: "Create",
+    description: "Make it simple, but significant",
   },
   {
-    title: "Branding",
-    description:
-      "Elevate your brand's identity with our distinctive branding solutions. Our team of nerds crafts compelling brand stories, logos, and guidelines that resonate with your audience and set you apart from the competition.",
-    icon: "bx:bxs-user",
+    title: "Perform",
+    description: "Success comes from standing out, not fitting in",
+  },
+  {
+    title: "Optimize",
+    description: "If it's good, make it better",
   },
 ];
 
@@ -46,20 +45,30 @@ const Services = () => {
 
   return (
     <div
-      className={`p-4 lg:p-16 xl:pt-32 md:pt-24 text-slate-800 flex flex-col bg-gradient-to-r xl:h-screen md:justify-center  ${
+      className={`p-4 lg:p-16 xl:pt-32 md:p-12 text-slate-800 flex flex-col bg-gradient-to-r xl:h-screen md:justify-center  ${
         darkMode
           ? "to-slate-900 from-gray-950 text-white"
           : "to-neutral-300 from-white text-slate-800"
       }`}
     >
-      <div className="lg:pb-8 pb-2 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
-        <h2 className="font-bold text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
-          Empowering your brand&apos;s success in a competitive world
+      <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  sm:justify-between items-center lg:flex-row ">
+        <h2 className="font-bold font-georgia text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          Our Principles
         </h2>
         <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-12 pb-6 ">
-        {features.map((item, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 pb-6 ">
+        {principles.map((item, index) => (
+          <ServiceCard key={index} data={item} />
+        ))}
+      </div>
+      <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
+        <h2 className="font-bold font-georgia text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          Our Process
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 pb-6 ">
+        {process.map((item, index) => (
           <ServiceCard key={index} data={item} />
         ))}
       </div>

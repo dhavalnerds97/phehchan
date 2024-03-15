@@ -1,6 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import LOGO from "../../assets/Phehchan-white-logo.png";
+import { Link } from "react-router-dom";
+import "../../App.css";
+import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.png";
+import WHITE_LOGO from "../../assets/Phehchan-white-logo.png";
 import { useTheme } from "../../utils/ThemeContext";
 import ToggleTheme from "../ui/ToggleTheme";
 
@@ -13,14 +16,22 @@ function NavBar() {
   }
 
   return (
-    <div className="text-amber-400 bg-gradient-to-b to-gray-800 from-slate-950 shadow-md flex justify-between items-center md:space-x-5 sticky px-4 md:px-8 lg:px-20 top-0 md:absolute md:w-screen left-0 z-40">
-      <div className="flex flex-col h-16 py-3">
-        <img
-          src={LOGO}
-          alt="logo"
-          className="h-full  object-cover"
-          width={240}
-        />
+    <div
+      className="bg-transparent flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-40"
+      style={{
+        backdropFilter: "blur(8px)",
+        backgroundColor: "rgba(255, 255, 255, 0)",
+      }}
+    >
+      <div className="flex h-16 py-3">
+        <Link to="/">
+          <img
+            src={darkMode ? WHITE_LOGO : COLOUR_LOGO}
+            alt="logo"
+            className="h-full object-cover"
+            width={240}
+          />
+        </Link>
         {/* <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
         <p className="text-xs">Brand Solutions</p> */}
       </div>
@@ -31,11 +42,10 @@ function NavBar() {
         {!menu ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8"
+            className={`w-8 h-8 ${darkMode ? "text-white" : "text-slate-900"} `}
           >
             <path
               strokeLinecap="round"
@@ -46,11 +56,10 @@ function NavBar() {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8"
+            className={`w-8 h-8 ${darkMode ? "text-white" : "text-slate-900"} `}
           >
             <path
               strokeLinecap="round"
@@ -66,30 +75,40 @@ function NavBar() {
             initial={{ x: "-100%" }}
             animate={{ x: "0%" }}
             exit={{ x: "-100%" }}
-            className={`md:hidden md:space-x-4 py-4 text-slate-900 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
-              darkMode ? "bg-slate-950 text-white divide-gray-400" : "bg-white divide-gray-100"
+            className={`md:hidden md:space-x-4 py-4 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
+              darkMode ? " text-white bg-slate-950" : "text-slate-900 bg-white"
             }`}
           >
-            <li className="py-2">Studio</li>
-            <li className="py-2">Services</li>
-            <li className="py-2">Method</li>
-            <li className="py-2">Works</li>
+            <Link to="/" className="py-2">
+              Studio
+            </Link>
+            <Link to="/" className="py-2">
+              Services
+            </Link>
+            <Link to="/" className="py-2">
+              Method
+            </Link>
+            <Link to="/" className="py-2">
+              <Link to="/about" className="py-2">
+                About Us
+              </Link>
+            </Link>
           </motion.ul>
         )}
       </AnimatePresence>
-      <ul className="hidden font-semibold font-custom capitalize md:flex md:space-x-4 lg:space-x-8 text-lg items-center">
-        <li className="py-2 item-hover" data-text="Studio">
+      <ul className="hidden font-semibold font-quicksand capitalize md:flex md:space-x-4 lg:space-x-8 text-lg items-center">
+        <Link to="/about" className="py-2 item-hover" data-text="About Us">
+          About Us
+        </Link>
+        <Link to="/" className="py-2 item-hover" data-text="Studio">
           Studio
-        </li>
-        <li className="py-2 item-hover" data-text="Services">
+        </Link>
+        <Link to="/" className="py-2 item-hover" data-text="Services">
           Services
-        </li>
-        <li className="py-2 item-hover" data-text="Method">
+        </Link>
+        <Link to="/" className="py-2 item-hover" data-text="Method">
           Method
-        </li>
-        <li className="py-2 item-hover" data-text="Works">
-          Works
-        </li>
+        </Link>
       </ul>
       <div className="hidden md:block">
         <ToggleTheme />

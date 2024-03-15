@@ -23,7 +23,7 @@ const objectives = [
 const ObjectivesKPIs = () => {
   return (
     <div className="text-wrap max-sm:text-center">
-      <h2 className="text-2xl lg:text-3xl py-4 font-georgia font-semibold">
+      <h2 className="text-2xl lg:text-3xl py-4 font-cinzel font-semibold">
         Objectives & KPI's
       </h2>
       {objectives.map((item, index) => (

@@ -34,7 +34,7 @@ const Reviews = () => {
       }`}
     >
       <div className="pb-12 gap-2 flex flex-col items-center">
-        <h2 className="font-bold font-georgia text-3xl md:text-4xl max-w-2xl">
+        <h2 className="font-bold font-cinzel text-3xl md:text-4xl max-w-2xl">
           Plan of Action
         </h2>
       </div>

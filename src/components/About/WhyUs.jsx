@@ -11,8 +11,8 @@ const WhyUs = () => {
     >
       <div className="bg-gray-400">Image</div>
       <div className="text-wrap">
-        <h2 className=" py-4 font-bold text-5xl font-georgia lg:text-7xl"> Why Us</h2>
-        <h3 className="text-xl">We build brands people love</h3>
+        <h2 className=" py-4 font-bold text-5xl font-cinzel lg:text-7xl"> Why Us</h2>
+        <h3 className="text-xl font-quicksand">We build brands people love</h3>
         <p className="py-2 font-medium font-slab">
           Phehchan is an agency where excellence thrives with a team of elite
           professionals who boast years of industry experience. With an

@@ -11,10 +11,10 @@ const ServiceCard = (props) => {
           : "bg-white text-slate-700"
       }`}
     >
-      <h2 className="font-bold text-lg">{props.data.title}</h2>
+      <h2 className="font-bold font-rubik text-lg">{props.data.title}</h2>
       <div className="my-4 w-24 border border-gray-400 "></div>
       <p
-        className={` text-wrap ${
+        className={` text-wrap font-nunito ${
           darkMode ? "text-gray-200" : "text-slate-600"
         }`}
       >

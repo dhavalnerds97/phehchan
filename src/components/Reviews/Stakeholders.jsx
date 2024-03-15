@@ -45,16 +45,16 @@ const Stakeholders = () => {
     >
       <div className="bg-gray-400">Image</div>
       <div className="text-wrap">
-        <h2 className=" py-4 font-bold text-4xl font-georgia lg:text-6xl">
+        <h2 className=" py-4 font-bold text-4xl font-cinzel lg:text-6xl">
           Stakeholders for SCP
         </h2>
         {stakeholdersData.map((item, index) => (
           <div key={index} className="py-1">
-            <h2 className="font-medium text-lg sm:-ms-2"> {item.heading}</h2>
-            <p>
+            <h2 className="font-semibold font-urbanist text-lg sm:-ms-2"> {item.heading}</h2>
+            <p className="font-quicksand">
               <strong>Channel: </strong> {item.channel}
             </p>
-            <p className="pb-2">
+            <p className="pb-2 font-apple">
               <strong>{item.title}: </strong> {item.description}
             </p>
           </div>

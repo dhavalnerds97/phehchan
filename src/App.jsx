@@ -1,20 +1,11 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import ApproachObjCapab from "./components/About/ApproachObjCapab";
-import CelebsRecs from "./components/About/CelebsRecs";
-import KeyContent from "./components/About/KeyContent";
-import Recommendations from "./components/About/Recommendations";
-import WhyUs from "./components/About/WhyUs";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Header/Hero";
+import AboutUs from "./components/About/AboutUs";
+import Body from "./components/Body/Body";
 import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
-import Reviews from "./components/Reviews/Reviews";
-import Stakeholders from "./components/Reviews/Stakeholders";
-import Services from "./components/Services/Services";
-import Team from "./components/Team/Team";
-import { useTheme } from "./utils/ThemeContext";
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -23,7 +14,6 @@ const App = () => {
   const containerRef = useRef(null);
   const controls = useAnimation();
   const { scrollXProgress } = useScroll({ container: containerRef });
-  const { darkMode } = useTheme();
 
   useEffect(() => {
     let videoElement = null;
@@ -66,7 +56,7 @@ const App = () => {
 
   const handleWheel = (e) => {
     const delta = Math.max(-1, Math.min(1, e.deltaY));
-    containerRef.current.scrollLeft += delta * 50;
+    containerRef.current.scrollLeft += delta * 80;
   };
 
   const handleKeyDown = (e) => {
@@ -109,44 +99,12 @@ const App = () => {
             <NavBar id="navbar" />
           </motion.div>
         )}
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Hero />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Services />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Reviews />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Team />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <ApproachObjCapab />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Stakeholders />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <KeyContent />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <Recommendations />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <CelebsRecs />
-        </div>
-        <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
-          <WhyUs />
-        </div>
-        <div className="xl:w-screen xl:h-screen">
-          <Footer />
-        </div>
+        <Outlet />
       </motion.div>
       <svg
         id="progress"
-        width="100"
-        height="100"
+        width="60"
+        height="60"
         className="hidden xl:block"
         viewBox="0 0 100 100"
       >
@@ -164,4 +122,21 @@ const App = () => {
   );
 };
 
-export default App;
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <AboutUs />,
+      },
+    ],
+  },
+]);
+
+export default appRouter;

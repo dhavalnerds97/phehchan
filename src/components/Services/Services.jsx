@@ -52,7 +52,7 @@ const Services = () => {
       }`}
     >
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  sm:justify-between items-center lg:flex-row ">
-        <h2 className="font-bold font-georgia text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+        <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Our Principles
         </h2>
         <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
@@ -63,7 +63,7 @@ const Services = () => {
         ))}
       </div>
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
-        <h2 className="font-bold font-georgia text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+        <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Our Process
         </h2>
       </div>

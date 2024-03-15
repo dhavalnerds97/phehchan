@@ -11,11 +11,11 @@ const Person = ({data}) => {
         />
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
           <figcaption className="font-medium">
-            <div className="text-slate-500 ">{data.title}</div>
-            <div className=" ">{data.name}</div>
+            <div className="text-slate-500 font-urbanist ">{data.title}</div>
+            <div className=" font-fantasy-">{data.name}</div>
           </figcaption>
           <blockquote>
-            <p className="text-wrap font-medium">{data.about}
+            <p className="text-wrap font-nunito font-medium">{data.about}
             </p>
           </blockquote>
         </div>

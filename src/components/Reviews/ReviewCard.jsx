@@ -13,7 +13,7 @@ const ReviewCard = ({ data }) => {
     >
       <div className="flex gap-4 py-2 md:pb-6 items-center">
         <div className="">
-          <h2 className="font-bold text-lg">{data.title}</h2>
+          <h2 className="font-bold font-rubik text-lg">{data.title}</h2>
         </div>
       </div>
       <ul
@@ -22,7 +22,7 @@ const ReviewCard = ({ data }) => {
         } `}
       >
         {data?.lists.map((item, index) => (
-          <li key={index} className="list-decimal ms-4 pb-0.5">{item} </li>
+          <li key={index} className="list-decimal font-nunito ms-4 pb-0.5">{item} </li>
         ))}
       </ul>
     </div>

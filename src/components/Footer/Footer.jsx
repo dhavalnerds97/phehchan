@@ -2,22 +2,22 @@ import ContactUs from "../Contact/ContactUs";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-1 min-h-screen max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:h-screen md:p-6 xl:pt-20 lg:grid lg:grid-cols-2 gap-12 bg-black">
+    <div className="grid grid-cols-1 min-h-screen max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:p-6 xl:pt-20  lg:grid-cols-2 gap-12 bg-black">
       <div className="col-span-1">
         <ContactUs />
-        {/* <p className="text-white text-wrap">
-          Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
-        </p> */}
       </div>
-      <div className="col-span-1">
-        <div className=" object-cover" >
+      <div className="col-span-1 flex">
+        <div className="flex relative justify-center items-center" >
           <img
             src="/contactus.jpg"
             alt="contact"
-            className="hidden lg:block object-cover"
+            className="hidden lg:block object-cover object-center h-[640px]"
           />
         </div>
-        <div className="space-x-2 p-4 col-span-1 flex items-end md:gap-2">
+        {/* <p className="text-white text-wrap">
+          Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
+        </p> */}
+        <div className="space-x-2 md:flex-col p-4 col-span-1 flex items-end justify-end md:gap-2">
           <a href="https://www.twitter.com/" target="_blank">
             <svg
               className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"

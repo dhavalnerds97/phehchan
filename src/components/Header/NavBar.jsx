@@ -17,7 +17,7 @@ function NavBar() {
 
   return (
     <div
-      className="bg-transparent flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-40"
+      className="bg-transparent flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30"
       style={{
         backdropFilter: "blur(8px)",
         backgroundColor: "rgba(255, 255, 255, 0)",
@@ -79,19 +79,17 @@ function NavBar() {
               darkMode ? " text-white bg-slate-950" : "text-slate-900 bg-white"
             }`}
           >
-            <Link to="/" className="py-2">
+            <Link to="/about" className="py-2 block">
+              About Us
+            </Link>
+            <Link to="/" className="py-2 block">
               Studio
             </Link>
-            <Link to="/" className="py-2">
+            <Link to="/" className="py-2 block">
               Services
             </Link>
-            <Link to="/" className="py-2">
+            <Link to="/" className="py-2 block">
               Method
-            </Link>
-            <Link to="/" className="py-2">
-              <Link to="/about" className="py-2">
-                About Us
-              </Link>
             </Link>
           </motion.ul>
         )}

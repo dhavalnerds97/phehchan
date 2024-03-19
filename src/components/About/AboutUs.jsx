@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Reviews from "../Reviews/Reviews";
 import Stakeholders from "../Reviews/Stakeholders";
 import Services from "../Services/Services";
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <Team />
       <Stakeholders />
       <WhyUs />
+      <Footer/> 
     </div>
   );
 };

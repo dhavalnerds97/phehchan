@@ -4,8 +4,10 @@ import { Outlet, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import AboutUs from "./components/About/AboutUs";
 import Body from "./components/Body/Body";
+import MainMenu from "./components/Header/MainMenu";
 import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
+import Cursor from "./components/ui/Cursor";
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -13,6 +15,7 @@ const App = () => {
   const playbackRef = useRef(null);
   const containerRef = useRef(null);
   const controls = useAnimation();
+
   const { scrollXProgress } = useScroll({ container: containerRef });
 
   useEffect(() => {
@@ -55,8 +58,8 @@ const App = () => {
   };
 
   const handleWheel = (e) => {
-    const delta = Math.max(-1, Math.min(1, e.deltaY));
-    containerRef.current.scrollLeft += delta * 80;
+    const delta = e.deltaY || -e.deltaX;
+    containerRef.current.scrollLeft += delta;
   };
 
   const handleKeyDown = (e) => {
@@ -80,6 +83,7 @@ const App = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        <Cursor />
         {!removePlayback && (
           <motion.div
             className="xl:w-screen xl:h-screen xl:flex-shrink-0"
@@ -134,6 +138,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/main-menu",
+        element: <MainMenu />,
       },
     ],
   },

@@ -28,12 +28,14 @@ function useEventListener(eventName, handler, element = document) {
  *
  * @author Stephen Scaff
  */
+
+
 function AnimatedCursor({
-  color = "220, 90, 90",
+  color = "255, 137, 17",
   outerAlpha = 0.4,
   innerSize = 8,
-  outerSize = 8,
-  outerScale = 5,
+  outerSize = 30,
+  outerScale = 3,
   innerScale = 0.7,
 }) {
   const cursorOuterRef = React.useRef();
@@ -162,6 +164,7 @@ function AnimatedCursor({
       });
     };
   }, [isActive]);
+  
   const styles = {
     cursor: {
       zIndex: 9999, // Set a very high z-index value
@@ -171,6 +174,7 @@ function AnimatedCursor({
       transition: "opacity 0.15s ease-in-out, transform 0.15s ease-in-out",
     },
     cursorInner: {
+      zIndex:9999,
       position: "fixed",
       borderRadius: "50%",
       width: innerSize,
@@ -180,6 +184,7 @@ function AnimatedCursor({
       transition: "opacity 0.15s ease-in-out, transform 0.25s ease-in-out",
     },
     cursorOuter: {
+      zIndex:9999,
       position: "fixed",
       borderRadius: "50%",
       pointerEvents: "none",

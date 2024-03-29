@@ -1,7 +1,6 @@
 import { useTheme } from "../../utils/ThemeContext";
 import Approach from "./Approach";
 import Capabilities from "./Capabilities";
-import ObjectivesKPIs from "./ObjectivesKPIs";
 
 const ApproachObjCapab = () => {
   const { darkMode } = useTheme();
@@ -16,7 +15,7 @@ const ApproachObjCapab = () => {
         <Capabilities />
         <Approach />
       </div>
-      <ObjectivesKPIs />
+      <div className="bg-gray-400">Image</div>
     </div>
   );
 };

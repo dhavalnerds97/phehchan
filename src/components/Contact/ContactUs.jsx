@@ -50,7 +50,7 @@ const ContactUs = () => {
       <div className="flex h-auto p-2 py-8 ">
         <div className="bg-amber-500 w-1"></div>
         <div className="pl-[20px] text-gray-100">
-          <p className="text-4xl pt-2 font-paint pb-4">
+          <p className="text-4xl pt-2 font-urbanist pb-4">
             Wish to take a sneak peek into our success stories?
           </p>
           <p className="font-urbanist pb-2">

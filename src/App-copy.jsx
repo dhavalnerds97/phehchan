@@ -58,30 +58,8 @@ const App = () => {
   };
 
   const handleWheel = (e) => {
-    const aboutUsElement = e.target.closest(".about-us-container");
-
-    if (aboutUsElement) {
-      const maxScrollTop =
-        aboutUsElement.scrollHeight - aboutUsElement.clientHeight;
-
-      if (
-        (e.deltaY > 0 && aboutUsElement.scrollTop >= maxScrollTop) ||
-        (e.deltaY < 0 && aboutUsElement.scrollTop === 0)
-      ) {
-        // Attempt to scroll horizontally if at the bottom and scrolling down, or at the top and scrolling up
-        e.preventDefault(); // Prevent the default vertical scroll
-        const delta = e.deltaY; // Use deltaY for horizontal scroll delta
-        containerRef.current.scrollLeft += delta;
-      } else {
-        // Normal vertical scrolling
-        return; // Allow the default scroll behavior
-      }
-    } else {
-      // If not in AboutUs, handle horizontal scroll
-      e.preventDefault(); // Prevent the default scroll which could be vertical
-      const delta = e.deltaY || -e.deltaX;
-      containerRef.current.scrollLeft += delta;
-    }
+    const delta = e.deltaY || -e.deltaX;
+    containerRef.current.scrollLeft += delta;
   };
 
   const handleKeyDown = (e) => {
@@ -129,8 +107,8 @@ const App = () => {
       </motion.div>
       <svg
         id="progress"
-        width="30"
-        height="30"
+        width="60"
+        height="60"
         className="hidden xl:block"
         viewBox="0 0 100 100"
       >

@@ -6,12 +6,15 @@ const WhyUs = () => {
   return (
     <div
       className={`text-wrap p-8 lg:p-16 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 lg:gap-16 lg:h-screen ${
-        darkMode ? "bg-slate-950 text-white" : "bg-white text-slate-800"
+        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="bg-gray-400">Image</div>
       <div className="text-wrap">
-        <h2 className=" py-4 font-bold text-5xl font-cinzel lg:text-7xl"> Why Us</h2>
+        <h2 className=" py-4 font-bold text-5xl font-cinzel lg:text-7xl">
+          {" "}
+          Why Us?
+        </h2>
         <h3 className="text-xl font-quicksand">We build brands people love</h3>
         <p className="py-2 font-medium font-slab">
           Phehchan is an agency where excellence thrives with a team of elite

@@ -5,7 +5,9 @@ const ToggleTheme = () => {
 
   return (
     <button
-      className={`flex items-center justify-center max-sm:size-6 size-8 text-white ${darkMode? "fill-white" : "fill-slate-900"}`}
+      className={`flex items-center justify-center max-sm:size-6 size-8 text-white ${
+        darkMode ? "fill-white" : "fill-slate-900"
+      }`}
       onClick={toggleDarkMode}
     >
       {darkMode ? (

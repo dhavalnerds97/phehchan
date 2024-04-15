@@ -1,13 +1,24 @@
+import { useSectionInView } from "../../utils/useSectionInView";
 import ContactUs from "../Contact/ContactUs";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const { ref } = useSectionInView("Contact Us", 0.5);
+
   return (
-    <div className="grid grid-cols-1 min-h-screen max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:p-6 xl:pt-20  lg:grid-cols-2 gap-12 bg-black">
+    <motion.section
+      ref={ref}
+      className="grid grid-cols-1 min-h-screen max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:p-6 xl:pt-20  lg:grid-cols-2 lg:gap-12 bg-black"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+      id="contact"
+    >
       <div className="col-span-1">
         <ContactUs />
       </div>
       <div className="col-span-1 flex">
-        <div className="flex relative justify-center items-center" >
+        <div className="flex relative justify-center items-center">
           <img
             src="/contactus.jpg"
             alt="contact"
@@ -17,8 +28,8 @@ const Footer = () => {
         {/* <p className="text-white text-wrap">
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p> */}
-        <div className="space-x-2 md:flex-col p-4 col-span-1 flex items-end justify-end md:gap-2">
-          <a href="https://www.twitter.com/" target="_blank">
+        <div className="space-x-2 lg:flex-col p-4 col-span-1 flex items-end justify-end lg:mb-14 md:gap-2">
+          {/* <a href="https://www.twitter.com/" target="_blank">
             <svg
               className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"
               viewBox="0 0 24 24"
@@ -26,8 +37,11 @@ const Footer = () => {
             >
               <path d="M20.598 6.356c.008.18.012.362.012.543 0 5.523-4.202 11.887-11.885 11.887-2.355 0-4.545-.687-6.389-1.877.326.038.655.057.987.057 1.948 0 3.746-.663 5.173-1.784a4.202 4.202 0 0 1-3.914-2.906 4.219 4.219 0 0 0 1.885-.072 4.197 4.197 0 0 1-3.364-4.108c.56.32 1.208.516 1.896.538a4.202 4.202 0 0 1-1.648-5.623 11.915 11.915 0 0 0 8.648 4.384 4.731 4.731 0 0 1-.11-.957 4.196 4.196 0 0 1 7.24-2.868 8.418 8.418 0 0 0 2.65-1.013 4.192 4.192 0 0 1-1.85 2.319c.84-.09 1.645-.324 2.393-.647z" />
             </svg>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank">
+          </a> */}
+          <a
+            href="https://www.instagram.com/phehchan.brandsolutions/?igsh=MTZydTQ0cjdhd3RvNw%3D%3D"
+            target="_blank"
+          >
             <svg
               className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
               viewBox="0 0 24 24"
@@ -38,7 +52,10 @@ const Footer = () => {
               </g>
             </svg>
           </a>
-          <a href="https://www.facebook.com/" target="_blank">
+          <a
+            href="https://www.facebook.com/people/Phehchan-Brand-Solutions/61557058667451/?mibextid=LQQJ4d"
+            target="_blank"
+          >
             <svg
               className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
               viewBox="0 0 24 24"
@@ -49,7 +66,10 @@ const Footer = () => {
               </g>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/" target="_blank">
+          <a
+            href="https://www.linkedin.com/company/phehchan-brand-solutions/"
+            target="_blank"
+          >
             <svg
               className=" size-8 md:size-12 fill-white hover:fill-slate-700 transition-colors duration-700"
               viewBox="0 0 24 24"
@@ -62,7 +82,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

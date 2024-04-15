@@ -27,7 +27,7 @@ const CelebsRecs = () => {
   return (
     <div
       className={`text-wrap p-8 lg:p-16 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 lg:gap-16 lg:h-screen ${
-        darkMode ? "bg-slate-950 text-white" : "bg-white text-slate-800"
+        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="bg-gray-400">Image</div>
@@ -38,7 +38,7 @@ const CelebsRecs = () => {
         <ul>
           {celebsRecsData.map((item, index) => (
             <li key={index} className="pb-1 sm:ms-6 sm:list-disc ">
-             {item}
+              {item}
             </li>
           ))}
         </ul>

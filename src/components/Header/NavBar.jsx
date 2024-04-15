@@ -2,18 +2,60 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.png";
-import WHITE_LOGO from "../../assets/Phehchan-white-logo.png";
+import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.svg";
+import BLACK_LOGO from "../../assets/Phehchan-black-logo.svg";
+import WHITE_LOGO from "../../assets/Phehchan-white-logo.svg";
 import { useTheme } from "../../utils/ThemeContext";
 import ToggleTheme from "../ui/ToggleTheme";
+import { useActiveSectionContext } from "../../utils/active-section-context";
+
+const navItems = [
+  {
+    name: "About Us",
+    hash: "#about",
+    dataText: "About Us",
+  },
+  {
+    name: "Method",
+    hash: "#method",
+    dataText: "Method",
+  },
+  {
+    name: "Services",
+    hash: "#services",
+    dataText: "Services",
+  },
+  {
+    name: "Contact Us",
+    hash: "#contact",
+    dataText: "Contact Us",
+  },
+];
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
   const { darkMode } = useTheme();
 
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
+
   function alterMenu() {
     setMenu(!menu);
   }
+
+  const handleScroll = (e) => {
+    // Prevent the default anchor click behavior
+    e.preventDefault();
+
+    // Get the target section ID from the href attribute of the clicked anchor tag
+    const targetId = e.currentTarget.getAttribute("href").slice(1); // Remove the '#' from the href
+    const targetElement = document.getElementById(targetId);
+
+    // Use scrollIntoView to scroll to the target element
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -23,10 +65,10 @@ function NavBar() {
         backgroundColor: "rgba(255, 255, 255, 0)",
       }}
     >
-      <div className="flex h-16 py-3">
+      <div className="flex h-20 py-3">
         <Link to="/">
           <img
-            src={darkMode ? WHITE_LOGO : COLOUR_LOGO}
+            src={darkMode ? WHITE_LOGO : BLACK_LOGO}
             alt="logo"
             className="h-full object-cover"
             width={240}
@@ -35,9 +77,9 @@ function NavBar() {
         {/* <h1 className="font-bold text-xl md:text-2xl">Phehchan</h1>
         <p className="text-xs">Brand Solutions</p> */}
       </div>
-      <div className="sm:hidden max-sm:block">
+      {/* <div className="sm:hidden max-sm:block">
         <ToggleTheme />
-      </div>
+      </div> */}
       <div onClick={alterMenu} className="cursor-pointer md:hidden flex">
         {!menu ? (
           <svg
@@ -76,41 +118,70 @@ function NavBar() {
             animate={{ x: "0%" }}
             exit={{ x: "-100%" }}
             className={`md:hidden md:space-x-4 py-4 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
-              darkMode ? " text-white bg-slate-950" : "text-slate-900 bg-white"
+              darkMode ? " text-white bg-gray-950" : "text-slate-900 bg-gray-50"
             }`}
           >
-            <Link to="/about" className="py-2 block">
-              About Us
-            </Link>
-            <Link to="/" className="py-2 block">
-              Studio
-            </Link>
-            <Link to="/" className="py-2 block">
-              Services
-            </Link>
-            <Link to="/" className="py-2 block">
-              Method
-            </Link>
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.hash}
+                className="py-2 block"
+                onClick={(e) => {
+                  setActiveSection(item.name);
+                  setTimeOfLastClick(Date.now());
+                  handleScroll(e);
+                }}
+              >
+                {item.name}
+              </a>
+            ))}
           </motion.ul>
         )}
       </AnimatePresence>
-      <ul className="hidden font-semibold font-quicksand capitalize md:flex md:space-x-4 lg:space-x-8 text-lg items-center">
-        <Link to="/about" className="py-2 item-hover" data-text="About Us">
-          About Us
-        </Link>
-        <Link to="/" className="py-2 item-hover" data-text="Studio">
-          Studio
-        </Link>
-        <Link to="/" className="py-2 item-hover" data-text="Services">
-          Services
-        </Link>
-        <Link to="/" className="py-2 item-hover" data-text="Method">
-          Method
-        </Link>
-      </ul>
-      <div className="hidden md:block">
+      <motion.ul
+        initial={{ y: "-100%" }}
+        animate={{ y: "0%" }}
+        exit={{ y: "100%" }}
+        className={`hidden font-semibold font-quicksand capitalize md:flex space-x-2  items-center ${
+          darkMode ? " text-white" : "text-slate-900 "
+        }`}
+      >
+        {navItems.map((item) => (
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            key={item.name}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <a
+              href={item.hash}
+              className="py-2 item-hover "
+              data-text={item.dataText}
+              onClick={(e) => {
+                setActiveSection(item.name);
+                setTimeOfLastClick(Date.now());
+                handleScroll(e);
+              }}
+            >
+              {item.name}
+              {item.name === activeSection && (
+                <motion.span
+                  className="bg-gray-200 rounded-3xl absolute inset-0 -z-10"
+                  layoutId="activeSection"
+                  transition={{
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 30,
+                  }}
+                ></motion.span>
+              )}
+            </a>
+          </motion.li>
+        ))}
+      </motion.ul>
+      {/* <div className="hidden md:block">
         <ToggleTheme />
-      </div>
+      </div> */}
     </div>
   );
 }

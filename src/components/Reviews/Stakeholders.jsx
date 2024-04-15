@@ -40,7 +40,7 @@ const Stakeholders = () => {
   return (
     <div
       className={`text-wrap p-8 lg:p-16 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 lg:gap-16 lg:h-screen ${
-        darkMode ? "bg-slate-950 text-white" : "bg-white text-slate-800"
+        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="bg-gray-400">Image</div>
@@ -50,7 +50,10 @@ const Stakeholders = () => {
         </h2>
         {stakeholdersData.map((item, index) => (
           <div key={index} className="py-1">
-            <h2 className="font-semibold font-urbanist text-lg sm:-ms-2"> {item.heading}</h2>
+            <h2 className="font-semibold font-urbanist text-lg sm:-ms-2">
+              {" "}
+              {item.heading}
+            </h2>
             <p className="font-quicksand">
               <strong>Channel: </strong> {item.channel}
             </p>

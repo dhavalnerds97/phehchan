@@ -34,12 +34,14 @@ const Recommendations = () => {
   return (
     <div
       className={`text-wrap p-8 lg:p-16 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 lg:gap-16 lg:h-screen ${
-        darkMode ? "bg-slate-950 text-white" : "bg-white text-slate-800"
+        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="bg-gray-400">Image</div>
       <div className="text-wrap">
-      <h2 className=" py-4 font-bold text-4xl font-georgia lg:text-6xl">Recommendations </h2>
+        <h2 className=" py-4 font-bold text-4xl font-georgia lg:text-6xl">
+          Recommendations{" "}
+        </h2>
         {recommendationsData.map((item, index) => (
           <div key={index} className="py-1">
             <h2 className="font-medium text-lg">{item.title}</h2>

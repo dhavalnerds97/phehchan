@@ -59,25 +59,29 @@ const App = () => {
 
   const handleWheel = (e) => {
     const aboutUsElement = e.target.closest(".about-us-container");
+    const servicesElement = e.target.closest(".services-container");
 
-    if (aboutUsElement) {
+    // This helps determine which element triggered the wheel event
+    const currentElement = aboutUsElement || servicesElement;
+
+    if (currentElement) {
       const maxScrollTop =
-        aboutUsElement.scrollHeight - aboutUsElement.clientHeight;
+        currentElement.scrollHeight - currentElement.clientHeight;
 
       if (
-        (e.deltaY > 0 && aboutUsElement.scrollTop >= maxScrollTop) ||
-        (e.deltaY < 0 && aboutUsElement.scrollTop === 0)
+        (e.deltaY > 0 && currentElement.scrollTop >= maxScrollTop) ||
+        (e.deltaY < 0 && currentElement.scrollTop === 0)
       ) {
         // Attempt to scroll horizontally if at the bottom and scrolling down, or at the top and scrolling up
         e.preventDefault(); // Prevent the default vertical scroll
         const delta = e.deltaY; // Use deltaY for horizontal scroll delta
         containerRef.current.scrollLeft += delta;
       } else {
-        // Normal vertical scrolling
+        // Normal vertical scrolling within the aboutUs or services element
         return; // Allow the default scroll behavior
       }
     } else {
-      // If not in AboutUs, handle horizontal scroll
+      // If not in AboutUs or Services, handle horizontal scroll for other parts of the site
       e.preventDefault(); // Prevent the default scroll which could be vertical
       const delta = e.deltaY || -e.deltaX;
       containerRef.current.scrollLeft += delta;

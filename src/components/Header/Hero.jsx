@@ -6,13 +6,14 @@ const Hero = () => {
 
   return (
     <main
+      id="hero"
       className={`flex h-screen justify-center md:h-screen items-center relative  transition duration-500  ${
-        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
+        darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div
         className={`absolute inset-0 overflow-hidden ${
-          darkMode ? "bg-gray-950 text-white" : ""
+          darkMode ? "bg-neutral-900 text-white" : ""
         }`}
       >
         <div className="jumbo absolute -inset-[10px] opacity-50"></div>

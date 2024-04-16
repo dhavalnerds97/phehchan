@@ -72,7 +72,7 @@ const ContactUs = () => {
             type="text"
             ref={nameRef}
             placeholder="Enter your name"
-            className=" bg-slate-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
+            className=" bg-neutral-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
           />
         </div>
         <div className="flex flex-col mb-5 p-2">
@@ -88,7 +88,7 @@ const ContactUs = () => {
             type="email"
             ref={emailRef}
             placeholder="Enter your email"
-            className=" bg-slate-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
+            className=" bg-neutral-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
           />
         </div>
         <div className="flex flex-col mb-5 p-2">
@@ -104,13 +104,13 @@ const ContactUs = () => {
             type="tel"
             ref={contactRef}
             placeholder="Enter your contact number"
-            className=" bg-slate-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
+            className=" bg-neutral-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
             pattern="\d{8,}"
             title="Contact number must be at least 8 digits long"
           />
         </div>
         <div className="flex flex-col mb-5 p-2">
-          <button className="px-12 py-3 border-2 border-white bg-gray-950 text-white font-bold font-nunito hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300">
+          <button className="px-12 py-3 border-2 border-white bg-neutral-900 text-white font-bold font-nunito hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300">
             Submit
           </button>
         </div>

@@ -8,27 +8,27 @@ const Footer = () => {
   return (
     <motion.section
       ref={ref}
-      className="grid grid-cols-1 min-h-screen max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:p-6 xl:pt-20  lg:grid-cols-2 lg:gap-12 bg-black"
+      className="grid grid-cols-1 max-sm:items-center px-4 md:px-16 lg:px-32 py-2 w-screen md:p-6 xl:pt-20  lg:grid-cols-2 lg:gap-12 bg-black xl:h-screen"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="contact"
     >
-      <div className="col-span-1">
+      <div className="col-span-1 content-center">
         <ContactUs />
       </div>
-      <div className="col-span-1 flex">
+      <div className="col-span-1 flex flex-row">
         <div className="flex relative justify-center items-center">
           <img
             src="/contactus.jpg"
             alt="contact"
-            className="hidden lg:block object-cover object-center h-[640px]"
+            className="hidden lg:block object-cover object-center w-3/4 h-3/4"
           />
         </div>
         {/* <p className="text-white text-wrap">
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p> */}
-        <div className="space-x-2 lg:flex-col p-4 col-span-1 flex items-end justify-end lg:mb-14 md:gap-2">
+        <div className="space-x-2 p-4 bg flex items-end lg:mb-14 2xl:mb-32 md:gap-2">
           {/* <a href="https://www.twitter.com/" target="_blank">
             <svg
               className="size-8 md:size-12  fill-white hover:fill-slate-700 transition-colors duration-700"
@@ -82,6 +82,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <p className="text-white text-wrap">
+        Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
+      </p>
     </motion.section>
   );
 };

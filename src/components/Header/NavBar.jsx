@@ -118,7 +118,9 @@ function NavBar() {
             animate={{ x: "0%" }}
             exit={{ x: "-100%" }}
             className={`md:hidden md:space-x-4 py-4 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
-              darkMode ? " text-white bg-gray-950" : "text-slate-900 bg-gray-50"
+              darkMode
+                ? " text-white bg-neutral-900"
+                : "text-slate-900 bg-gray-50"
             }`}
           >
             {navItems.map((item) => (
@@ -166,7 +168,7 @@ function NavBar() {
               {item.name}
               {item.name === activeSection && (
                 <motion.span
-                  className="bg-gray-200 rounded-3xl absolute inset-0 -z-10"
+                  className="bg-gray-200/70 rounded-3xl absolute inset-0 -z-10"
                   layoutId="activeSection"
                   transition={{
                     type: "spring",

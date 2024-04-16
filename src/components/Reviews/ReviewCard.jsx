@@ -7,7 +7,7 @@ const ReviewCard = ({ data }) => {
     <div
       className={`p-6 md:p-8 text-wrap border md:h-auto rounded-lg shadow-lg hover:shadow-xl transform  hover:scale-105 transition duration-300 ease-in-out ${
         darkMode
-          ? "bg-gray-950 text-white shadow-lg shadow-gray-700 border-gray-700"
+          ? "bg-neutral-900 text-white shadow-lg shadow-gray-700 border-gray-700"
           : "bg-gray-50"
       }`}
     >

@@ -45,8 +45,8 @@ const Services = () => {
 
   return (
     <div
-      className={`p-4 lg:p-16 xl:pt-32 md:p-12 flex flex-col bg-gradient-to-r xl:h-screen md:justify-center  ${
-        darkMode ? "bg-gray-950 text-white" : "bg-gray-50 text-slate-800"
+      className={`p-4 lg:p-16 xl:pt-32 md:p-12 flex flex-col xl:h-screen md:justify-center  ${
+        darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  sm:justify-between items-center lg:flex-row ">

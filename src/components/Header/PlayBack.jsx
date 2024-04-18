@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 const PlayBack = forwardRef((props, ref) => {
   return (
-    <div className="text-white w-screen h-screen flex items-center justify-center bg-center object-cover">
+    <div className="text-neutral-100 w-screen h-screen flex items-center justify-center bg-center object-cover">
       <video
         ref={ref}
         className="sm:object-cover object-fill max-w-3xl bg-cover sm:max-w-full sm:w-full h-full"

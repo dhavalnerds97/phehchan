@@ -27,7 +27,9 @@ const CelebsRecs = () => {
   return (
     <div
       className={`text-wrap p-8 lg:p-16 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 lg:gap-16 lg:h-screen ${
-        darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-slate-800"
+        darkMode
+          ? "bg-neutral-900 text-neutral-100"
+          : "bg-gray-50 text-slate-800"
       }`}
     >
       <div className="bg-gray-400">Image</div>

@@ -110,7 +110,7 @@ const ContactUs = () => {
           />
         </div>
         <div className="flex flex-col mb-5 p-2">
-          <button className="px-12 py-3 border-2 border-white bg-neutral-900 text-white font-bold font-nunito hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300">
+          <button className="px-12 py-3 border-2 border-white bg-neutral-900 text-neutral-100 font-bold font-nunito hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300">
             Submit
           </button>
         </div>

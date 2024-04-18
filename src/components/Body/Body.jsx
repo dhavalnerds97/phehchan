@@ -14,15 +14,15 @@ const Body = () => {
       <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
         <Hero />
       </div>
-      <div className="xl:w-screen xl:h-screen xl:flex-shrink-0 overflow-auto">
+      <div className="xl:w-screen xl:h-screen snap-center xl:flex-shrink-0 overflow-auto">
         <AboutUs />
       </div>
       <div className="xl:w-screen xl:h-screen xl:flex-shrink-0 overflow-auto">
         <Services2 />
       </div>
-      <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
+      {/* <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
         <WhyUs />
-      </div>
+      </div> */}
       <div className="xl:w-screen xl:h-screen xl:flex-shrink-0">
         <Footer />
       </div>

@@ -87,7 +87,9 @@ function NavBar() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className={`w-8 h-8 ${darkMode ? "text-white" : "text-slate-900"} `}
+            className={`w-8 h-8 ${
+              darkMode ? "text-neutral-100" : "text-slate-900"
+            } `}
           >
             <path
               strokeLinecap="round"
@@ -101,7 +103,9 @@ function NavBar() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className={`w-8 h-8 ${darkMode ? "text-white" : "text-slate-900"} `}
+            className={`w-8 h-8 ${
+              darkMode ? "text-neutral-100" : "text-slate-900"
+            } `}
           >
             <path
               strokeLinecap="round"
@@ -119,7 +123,7 @@ function NavBar() {
             exit={{ x: "-100%" }}
             className={`md:hidden md:space-x-4 py-4 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
               darkMode
-                ? " text-white bg-neutral-900"
+                ? " text-neutral-100 bg-neutral-900"
                 : "text-slate-900 bg-gray-50"
             }`}
           >
@@ -145,7 +149,7 @@ function NavBar() {
         animate={{ y: "0%" }}
         exit={{ y: "100%" }}
         className={`hidden font-semibold font-quicksand capitalize md:flex space-x-2  items-center ${
-          darkMode ? " text-white" : "text-slate-900 "
+          darkMode ? " text-neutral-100" : "text-slate-900 "
         }`}
       >
         {navItems.map((item) => (
@@ -168,7 +172,7 @@ function NavBar() {
               {item.name}
               {item.name === activeSection && (
                 <motion.span
-                  className="bg-gray-200/70 rounded-3xl absolute inset-0 -z-10"
+                  className="bg-gray-400/40 rounded-3xl absolute inset-0 -z-10"
                   layoutId="activeSection"
                   transition={{
                     type: "spring",

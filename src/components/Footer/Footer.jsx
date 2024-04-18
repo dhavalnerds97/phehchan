@@ -25,7 +25,7 @@ const Footer = () => {
             className="hidden lg:block object-cover object-center w-3/4 h-3/4"
           />
         </div>
-        {/* <p className="text-white text-wrap">
+        {/* <p className="text-neutral-100 text-wrap">
           Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
         </p> */}
         <div className="space-x-2 p-4 bg flex items-end lg:mb-14 2xl:mb-32 md:gap-2">
@@ -82,7 +82,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <p className="text-white text-wrap">
+      <p className="text-neutral-100 text-wrap">
         Copyright © {new Date().getFullYear()} Phehchan. All rights reserved.
       </p>
     </motion.section>

@@ -29,7 +29,7 @@ const Reviews = () => {
     <div
       className={`p-4 md:p-8 lg:p-16 bg-gradient-to-l flex flex-col xl:h-screen md:justify-center md:items-center ${
         darkMode
-          ? "to-gray-900 from-slate-950 text-white"
+          ? "to-gray-900 from-slate-950 text-neutral-100"
           : "to-neutral-300 from-white text-slate-800"
       }`}
     >

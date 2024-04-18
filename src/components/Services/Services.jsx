@@ -1,6 +1,8 @@
 import { useTheme } from "../../utils/ThemeContext";
+import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
 import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
 
 const process = [
   {
@@ -42,12 +44,20 @@ const principles = [
 
 const Services = () => {
   const { darkMode } = useTheme();
+  const { ref } = useSectionInView("Method", 0.5);
 
   return (
-    <div
+    <motion.section
+      ref={ref}
       className={`p-4 lg:p-16 xl:pt-32 md:p-12 flex flex-col xl:h-screen md:justify-center  ${
-        darkMode ? "bg-neutral-900 text-white" : "bg-gray-50 text-slate-800"
+        darkMode
+          ? "bg-neutral-900 text-neutral-100"
+          : "bg-gray-50 text-slate-800"
       }`}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+      id="method"
     >
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  sm:justify-between items-center lg:flex-row ">
         <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
@@ -70,7 +80,7 @@ const Services = () => {
           <ServiceCard key={index} data={item} />
         ))}
       </div>
-    </div>
+    </motion.section>
   );
 };
 

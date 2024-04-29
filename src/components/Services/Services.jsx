@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <motion.section
       ref={ref}
-      className={`p-4 lg:p-16 xl:pt-32 md:p-12 flex flex-col xl:h-screen md:justify-center  ${
+      className={`p-4 md:p-12 flex flex-col md:justify-center  ${
         darkMode
           ? "bg-neutral-900 text-neutral-100"
           : "bg-gray-50 text-slate-800"
@@ -65,7 +65,7 @@ const Services = () => {
         </h2>
         <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 pb-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6 ">
         {principles.map((item, index) => (
           <ServiceCard key={index} data={item} />
         ))}

@@ -5,9 +5,10 @@ const ServiceCard = (props) => {
 
   return (
     <div
-      className={` drop-shadow-xl p-4 lg:p-6 rounded-lg text-wrap transition duration-100 ease-in-out ${
+      className={` p-4 lg:p-6 rounded-lg text-wrap transition duration-100 ease-in-out ${
         darkMode
-          ? "bg-neutral-900 text-neutral-100 shadow-lg shadow-gray-700/70 border-gray-50"
+          ? // shadow-lg shadow-gray-700/70 border-gray-50 drop-shadow-xl
+            "bg-neutral-900 text-neutral-100 "
           : "bg-white text-slate-700"
       }`}
     >

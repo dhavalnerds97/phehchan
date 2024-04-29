@@ -26,7 +26,7 @@ const AboutUs = () => {
   return (
     <motion.section
       ref={ref}
-      className="about-us-container relative w-screen min-h-screen bg-neutral-900 overflow-auto"
+      className="about-us-container relative w-full min-h-screen bg-neutral-900 overflow-auto"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -35,7 +35,7 @@ const AboutUs = () => {
       <WhyUs />
       <Services />
       <ApproachObjCapab />
-      <Team />
+      {/* <Team /> */}
       <div className="max-lg:hidden flex sticky px-8 bottom-10 justify-between items-end">
         <a
           href="#hero"

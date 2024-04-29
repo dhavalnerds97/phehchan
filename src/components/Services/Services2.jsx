@@ -30,7 +30,7 @@ const Services2 = () => {
   return (
     <motion.section
       ref={ref}
-      className="services-container relative w-screen min-h-screen bg-neutral-900 overflow-auto"
+      className="services-container relative w-full min-h-screen bg-neutral-900 overflow-auto"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

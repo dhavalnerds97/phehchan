@@ -21,7 +21,8 @@ const Hero = () => {
         <div className="jumbo absolute -inset-[10px] opacity-50"></div>
       </div>
       <div className="flex justify-between items-center max-sm:gap-4 flex-col p-4 md:p-12 md:max-w-4xl text-center transition-transform hover:scale-105 duration-500">
-        <h1 className="py-4 relative font-semibold font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent bg-gradient-to-b from-gray-50/80 to-gray-400/70 to-70% from-30% duration-1000">
+        {/* <h1 className="py-4 relative font-semibold font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent bg-gradient-to-b from-gray-50/80 to-gray-400/70 to-70% from-30% duration-1000"> */}
+        <h1 className="py-4 relative font-semibold font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent bg-gradient-to-r from-gray-200/70 via-gray-50 to-gray-200/70 duration-1000">
           <span>Elevating Brands:</span>
           <br />
           <span>

@@ -13,7 +13,7 @@ const WhyUs = () => {
       }`}
     >
       <div className="flex place-content-center bg-cover object-center">
-        <img src="img1.png" alt="" />
+        <img src="img1.png" alt="why-us" />
       </div>
       <div className="text-wrap">
         <h2 className=" py-4 font-bold text-5xl font-cinzel lg:text-7xl">

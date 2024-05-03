@@ -39,6 +39,10 @@ export default {
         georgia: ["Bodoni Moda", "Lora", "serif"],
         // Add other fonts here as needed
       },
+      screens: {
+        "lg-md": { min: "460px", max: "1024px" },
+        // Add more custom breakpoints as needed
+      },
     },
   },
   plugins: [],

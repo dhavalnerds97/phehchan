@@ -99,7 +99,7 @@ const App = () => {
   return (
     <>
       <motion.div
-        className="xl:flex xl:overflow-x-auto xl:overflow-y-hidden xl:whitespace-nowrap xl:w-dvw xl:h-screen"
+        className="xl:flex xl:overflow-x-auto xl:snap-mandatory xl:overflow-y-hidden xl:whitespace-nowrap xl:w-dvw xl:h-screen"
         onWheel={handleWheel}
         onKeyDown={handleKeyDown}
         ref={containerRef}

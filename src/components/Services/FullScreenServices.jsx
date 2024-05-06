@@ -15,7 +15,7 @@ const services = [
     title: "Marketing Expertise",
     imgURL: "img5.jpg",
     description:
-      "In today's competitive markets, our tailored approach highlights your brand's unique voice. Our marketing solutions employ diverse strategies to propel your brand forward, including digital and social media campaigns, SEO, and content marketing. We guarantee online visibility and engagement, leveraging influencer collaborations, strategic branding, and expert advertising advice to enhance your brand's presence and connect with your target market effectively.",
+      "In today's competitive markets, our tailored approach highlights your brand's unique voice. Our marketing solutions employ diverse strategies to propel your brand forward, including digital and social media campaigns, SEO, and content marketing. We guarantee online visibility and strategic branding, and expert advertising advice to enhance your brand's presence and connect with your target market effectively.",
     hash: "marketing-expertise",
   },
   {

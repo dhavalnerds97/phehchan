@@ -29,7 +29,6 @@ function useEventListener(eventName, handler, element = document) {
  * @author Stephen Scaff
  */
 
-
 function AnimatedCursor({
   color = "255, 137, 17",
   outerAlpha = 0.4,
@@ -164,7 +163,7 @@ function AnimatedCursor({
       });
     };
   }, [isActive]);
-  
+
   const styles = {
     cursor: {
       zIndex: 9999, // Set a very high z-index value
@@ -174,7 +173,7 @@ function AnimatedCursor({
       transition: "opacity 0.15s ease-in-out, transform 0.15s ease-in-out",
     },
     cursorInner: {
-      zIndex:9999,
+      zIndex: 9999,
       position: "fixed",
       borderRadius: "50%",
       width: innerSize,
@@ -184,7 +183,7 @@ function AnimatedCursor({
       transition: "opacity 0.15s ease-in-out, transform 0.25s ease-in-out",
     },
     cursorOuter: {
-      zIndex:9999,
+      zIndex: 9999,
       position: "fixed",
       borderRadius: "50%",
       pointerEvents: "none",
@@ -197,8 +196,16 @@ function AnimatedCursor({
 
   return (
     <React.Fragment>
-      <div ref={cursorOuterRef} style={styles.cursorOuter} />
-      <div ref={cursorInnerRef} style={styles.cursorInner} />
+      <div
+        ref={cursorOuterRef}
+        style={styles.cursorOuter}
+        className="hidden lg:block"
+      />
+      <div
+        ref={cursorInnerRef}
+        style={styles.cursorInner}
+        className="hidden lg:block"
+      />
     </React.Fragment>
   );
 }

@@ -5,9 +5,9 @@ import ProjectCard from "./PhotoCard";
 const MediaProductions = () => {
   const { darkMode } = useTheme();
   return (
-    <section className="relative w-full min-h-screen bg-neutral-900 overflow-auto">
+    <section className="relative w-full min-h-screen bg-neutral-900 pt-24 overflow-auto">
       <div
-        className={`p-4 lg:p-16 xl:pt-32 md:p-12 text-wrap flex flex-col md:justify-center  ${
+        className={`p-4 lg:p-16 xl:pt-16 md:p-12 text-wrap flex flex-col md:justify-center  ${
           darkMode
             ? "bg-neutral-900 text-neutral-100"
             : "bg-gray-50 text-slate-800"

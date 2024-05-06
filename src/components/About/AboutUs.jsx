@@ -36,7 +36,7 @@ const AboutUs = () => {
       {/* <Services /> */}
       <ApproachObjCapab />
       {/* <Team /> */}
-      <div className="max-lg:hidden flex sticky px-8 bottom-10 justify-between items-end">
+      {/* <div className="flex sticky px-8 bottom-10 justify-between items-end">
         <a
           href="#hero"
           className="sticky font-bold text-neutral-100 text-4xl bottom-10 z-10"
@@ -126,7 +126,7 @@ const AboutUs = () => {
             </g>
           </svg>
         </a>
-      </div>
+      </div> */}
     </motion.section>
   );
 };

@@ -19,14 +19,14 @@ const Services2 = () => {
   return (
     <motion.section
       ref={ref}
-      className="services-container relative w-full min-h-screen bg-neutral-900 overflow-auto"
+      className="services-container relative w-full min-h-screen pt-24 bg-neutral-900 overflow-auto"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="services"
     >
       <div
-        className={`p-4 lg:p-16 xl:pt-32 md:p-12 text-wrap flex flex-col md:justify-center  ${
+        className={`p-4 lg:p-16 xl:pt-16 md:p-12 text-wrap flex flex-col md:justify-center  ${
           darkMode
             ? "bg-neutral-900 text-neutral-100"
             : "bg-gray-50 text-slate-800"

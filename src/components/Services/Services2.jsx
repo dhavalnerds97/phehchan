@@ -7,6 +7,7 @@ import {
 } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
+import PhotoCard from "./PhotoCard";
 import ProjectCard from "./PhotoCard";
 import ServiceCard2 from "./ServiceCard2";
 import { motion } from "framer-motion";
@@ -31,12 +32,14 @@ const Services2 = () => {
             : "bg-gray-50 text-slate-800"
         }`}
       >
-        {/* <ProjectCard /> */}
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
           <h2 className="font-bold font-cinzel text-wrap text-3xl px-8 md:p-0 lg:text-4xl max-w-2xl">
             Our services
           </h2>
-          <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          <h2
+            id="marketing-expertise"
+            className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
+          >
             Marketing Expertise
           </h2>
           <p className="p-4">
@@ -51,13 +54,16 @@ const Services2 = () => {
             with target market tap-ins.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 ">
+        <div className="grid grid-cols-1 gap-6 lg:max-w-3xl mx-auto pb-6 ">
           {marketingExpertise.map((item, index) => (
-            <ServiceCard2 key={index} data={item} />
+            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
           ))}
         </div>
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
-          <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          <h2
+            id="media-production"
+            className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
+          >
             Media Productions
           </h2>
           <p className="p-4">
@@ -72,13 +78,16 @@ const Services2 = () => {
             is enjoyed by your audience.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 ">
+        <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 gap-6 ">
           {mediaProductions.map((item, index) => (
-            <ServiceCard2 key={index} data={item} />
+            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
           ))}
         </div>
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
-          <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          <h2
+            id="tech-solution"
+            className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
+          >
             Tech Solutions
           </h2>
           <p className="p-4">
@@ -92,9 +101,9 @@ const Services2 = () => {
             your unique needs and drive your success.{" "}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 ">
+        <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 gap-6 ">
           {techSolutions.map((item, index) => (
-            <ServiceCard2 key={index} data={item} />
+            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
           ))}
         </div>
       </div>

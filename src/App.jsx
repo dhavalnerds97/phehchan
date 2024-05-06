@@ -9,6 +9,9 @@ import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
 import Cursor from "./components/ui/Cursor";
 import Services2 from "./components/Services/Services2";
+import MarketingExpertise from "./components/Services/MarketingExpertise";
+import MediaProductions from "./components/Services/MediaProductions";
+import TechSolutions from "./components/Services/TechSolutions";
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -173,6 +176,18 @@ const appRouter = createBrowserRouter([
       {
         path: "/services",
         element: <Services2 />,
+      },
+      {
+        path: "/marketing-expertise",
+        element: <MarketingExpertise />,
+      },
+      {
+        path: "/media-production",
+        element: <MediaProductions />,
+      },
+      {
+        path: "/tech-solution",
+        element: <TechSolutions />,
       },
     ],
   },

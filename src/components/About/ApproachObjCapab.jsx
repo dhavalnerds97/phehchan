@@ -11,7 +11,7 @@ const ApproachObjCapab = () => {
     <motion.section
       className={`text-wrap p-8 lg:p-12 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 ${
         darkMode
-          ? "bg-neutral-700 text-neutral-100"
+          ? "bg-neutral-700/50 text-neutral-100"
           : "bg-gray-50 text-slate-800"
       }`}
       initial={{ opacity: 0, y: 100 }}

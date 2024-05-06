@@ -1,46 +1,28 @@
-const PhotoCard = () => {
+const PhotoCard = ({ service, isOdd }) => {
   return (
-    // <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 sm:h-80 p-4 sm:p-6 md:p-8">
-    //   <div className="w-full sm:w-5/12 sm:col-span-1">
-    //     <img src="img2.jpg" alt="" />
-    //   </div>
-    //   <div className=" w-full sm:w-7/12 p-4 sm:col-span-1">
-    //     <h2>dummy text</h2>
-    //     <p>
-    //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-    //       facere nostrum qui accusamus obcaecati, corrupti magnam labore, velit
-    //       cum expedita cumque autem ad reprehenderit eveniet et iste aliquid
-    //       quis dolore!
-    //     </p>
-    //   </div>
-    // </div>
-
-    <div className="sm:mb-10 lg:grid lg:grid-cols-5 md:grid-cols-none md:bg-gray-300 bg-gray-300 lg:bg-white lg:h-full">
-      <div className=" px-10 py-10 max-w-md m-auto lg:col-span-2 mt-20 mb-20 shadow-xl rounded-xl lg:mt-10 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none lg:w-full lg:mb-10 lg:px-5 lg:pt-5 lg:pb-5 lg:max-w-lg bg-white">
+    <div
+      className={`sm:mb-4 flex flex-col md:flex-row overflow-hidden text-wrap text-gray-50 border border-neutral-700 rounded-xl shadow-lg shadow-neutral-800 hover:shadow-xl hover:shadow-neutral-700/50 lg:h-full w-full group ${
+        isOdd ? "md:flex-row-reverse " : ""
+      }`}
+    >
+      <div className=" md:flex-1 shadow-xl md:w-2/3 rounded-xl lg:mt-6 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none lg:w-full lg:mb-6 lg:px-5 lg:pt-5 lg:pb-5">
         <img
-          className="h-64 sm:h-52 sm:w-full sm:object-cover lg:hidden object-center mt-2 rounded-lg shadow-2xl"
-          src="img8.jpg"
-          alt="Ad- woman on a beach"
+          className="h-64 w-full object-cover lg:hidden object-center mt-2 rounded-lg shadow-2xl"
+          src={service.imgURL}
+          alt={service.title}
         />
-        <h1 className="mt-5 font-bold text-lg lg:mt-7">
-          You can school from home!
+        <h1 className="mt-5 font-bold text-2xl font-cinzel lg:mt-7">
+          {service.title}
         </h1>
-        <h1 className="font-bold text-lg text-gray-600">Get started today!</h1>
-        <h1 className="text-lg text-gray-600 text-justify pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        <div className="my-3 w-24 border border-gray-400 "></div>
+        <h1 className="font-apple text-gray-100  pt-2">
+          {service.description}
         </h1>
-        <button className="mt-5 bg-gray-600 p-3 shadow-2xl rounded-xl text-white font-bold hover:bg-gray-800">
-          START STUDYING
-        </button>
       </div>
-
-      <div className="hidden relative lg:block  lg:col-span-3">
+      <div className="hidden relative lg:block md:w-1/3 md:flex-1">
         <img
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          src="img14.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500"
+          src={service.imgURL}
           alt="Ad- woman on a beach"
         />
       </div>

@@ -1,18 +1,19 @@
 {
   "redirects": [
-    { "source": "/about", "destination": "/" },
-    { "source": "/services", "destination": "/" },
+    { "source": "/", "dest": "/" },
+    { "source": "/about", "dest": "/" },
+    { "source": "/services", "dest": "/" },
     {
       "source": "/marketing-expertise",
-      "destination": "/"
+      "dest": "/"
     },
     {
       "source": "/media-production",
-      "destination": "/"
+      "dest": "/"
     },
     {
       "source": "/tech-solution",
-      "destination": "/"
+      "dest": "/"
     }
   ]
 }

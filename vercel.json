@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/", "permanent": false },
+    { "source": "/about", "destination": "/about", "permanent": false },
+    { "source": "/services", "destination": "/services", "permanent": false },
+    {
+      "source": "/marketing-expertise",
+      "destination": "/marketing-expertise",
+      "permanent": false
+    },
+    {
+      "source": "/media-production",
+      "destination": "/media-production",
+      "permanent": false
+    },
+    {
+      "source": "/tech-solution",
+      "destination": "/tech-solution",
+      "permanent": false
+    }
+  ]
+}

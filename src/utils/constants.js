@@ -72,13 +72,6 @@ export const marketingExpertise = [
     imgURL: "img12.jpg",
   },
   {
-    title: "Influencer Marketing",
-    description:
-      "Amplify your reach with influencer partnerships that resonate with your target demographics and enhance brand credibility.",
-    icon: "bx:bxs-data",
-    imgURL: "img19.jpg",
-  },
-  {
     title: "Media Buying",
     description:
       "Navigate the complexities of media planning and buying with expertise that ensures your ads are seen by the right people at the right time.",

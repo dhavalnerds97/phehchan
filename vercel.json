@@ -1,6 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/" },
     { "source": "/about", "destination": "/about" },
     { "source": "/services", "destination": "/services" },
     {

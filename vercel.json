@@ -1,22 +1,18 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/", "permanent": false },
-    { "source": "/about", "destination": "/about", "permanent": false },
-    { "source": "/services", "destination": "/services", "permanent": false },
+    { "source": "/about", "destination": "/about" },
+    { "source": "/services", "destination": "/services" },
     {
       "source": "/marketing-expertise",
-      "destination": "/marketing-expertise",
-      "permanent": false
+      "destination": "/marketing-expertise"
     },
     {
       "source": "/media-production",
-      "destination": "/media-production",
-      "permanent": false
+      "destination": "/media-production"
     },
     {
       "source": "/tech-solution",
-      "destination": "/tech-solution",
-      "permanent": false
+      "destination": "/tech-solution"
     }
   ]
 }

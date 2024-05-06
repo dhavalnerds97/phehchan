@@ -26,14 +26,14 @@ const AboutUs = () => {
   return (
     <motion.section
       ref={ref}
-      className="about-us-container relative w-full min-h-screen bg-neutral-900 overflow-auto"
+      className="about-us-container relative w-full min-h-screen bg-neutral-700 overflow-auto"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <WhyUs />
-      <Services />
+      {/* <Services /> */}
       <ApproachObjCapab />
       {/* <Team /> */}
       <div className="max-lg:hidden flex sticky px-8 bottom-10 justify-between items-end">
@@ -83,10 +83,10 @@ const AboutUs = () => {
           </svg>
         </a>
         <a
-          href="#services"
+          href="#method"
           className="sticky font-bold text-neutral-100 text-4xl bottom-10 z-10"
           onClick={(e) => {
-            setActiveSection("Services");
+            setActiveSection("Method");
             setTimeOfLastClick(Date.now());
             handleScroll(e);
           }}

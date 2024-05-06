@@ -8,6 +8,7 @@ import MainMenu from "./components/Header/MainMenu";
 import NavBar from "./components/Header/NavBar";
 import PlayBack from "./components/Header/PlayBack";
 import Cursor from "./components/ui/Cursor";
+import Services2 from "./components/Services/Services2";
 
 const App = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -168,6 +169,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/main-menu",
         element: <MainMenu />,
+      },
+      {
+        path: "/services",
+        element: <Services2 />,
       },
     ],
   },

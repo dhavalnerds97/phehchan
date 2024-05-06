@@ -1,6 +1,14 @@
+import { useSectionInView } from "../../utils/useSectionInView";
 import FullScreenServiceCard from "./FullScreenServiceCard";
+import { motion } from "framer-motion";
 
 const services = [
+  {
+    title: "Our Services",
+    imgURL: "img25.jpg",
+    description:
+      "Our Services encompass marketing expertise tailored to cut through the noise with digital campaigns, SEO tactics, influencer collaborations, and advertising advice. Additionally, we offer media productions including captivating advertising films, corporate films, professional photoshoots, and podcast production. Furthermore, our tech solutions include custom web development, app development, and versatile CMS solutions aimed at enhancing online engagement and streamlining operations. Let us bring your vision to life and help your brand stand out in today's digital-first world.",
+  },
   {
     title: "Marketing Expertise",
     imgURL: "img5.jpg",
@@ -22,8 +30,17 @@ const services = [
 ];
 
 const FullScreenServices = () => {
+  const { ref } = useSectionInView("Services");
+
   return (
-    <div className="w-full h-full flex flex-col gap-6 lg-md:gap-12 xl:flex-row xl:gap-1">
+    <motion.section
+      ref={ref}
+      className="w-full h-full flex flex-col gap-6 lg-md:gap-12 xl:flex-row xl:gap-1"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+      id="services"
+    >
       {services.map((service, index) => (
         <FullScreenServiceCard
           key={index}
@@ -31,7 +48,7 @@ const FullScreenServices = () => {
           isOdd={index % 2 !== 0}
         />
       ))}
-    </div>
+    </motion.section>
   );
 };
 

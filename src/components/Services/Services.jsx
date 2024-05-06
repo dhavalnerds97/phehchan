@@ -1,4 +1,5 @@
 import { useTheme } from "../../utils/ThemeContext";
+import { useActiveSectionContext } from "../../utils/active-section-context";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
 import ServiceCard from "./ServiceCard";
@@ -44,12 +45,12 @@ const principles = [
 
 const Services = () => {
   const { darkMode } = useTheme();
-  const { ref } = useSectionInView("Method", 0.5);
+  const { ref } = useSectionInView("Method");
 
   return (
     <motion.section
       ref={ref}
-      className={`p-4 md:p-12 flex flex-col md:justify-center  ${
+      className={`p-4 md:p-12 flex flex-col md:justify-center w-full h-full ${
         darkMode
           ? "bg-neutral-900 text-neutral-100"
           : "bg-gray-50 text-slate-800"

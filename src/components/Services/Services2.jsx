@@ -7,25 +7,13 @@ import {
 } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
+import ProjectCard from "./PhotoCard";
 import ServiceCard2 from "./ServiceCard2";
 import { motion } from "framer-motion";
 
 const Services2 = () => {
   const { ref } = useSectionInView("Services");
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
   const { darkMode } = useTheme();
-
-  const handleScroll = (e) => {
-    e.preventDefault();
-
-    const targetId = e.currentTarget.getAttribute("href").slice(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <motion.section
@@ -43,6 +31,7 @@ const Services2 = () => {
             : "bg-gray-50 text-slate-800"
         }`}
       >
+        {/* <ProjectCard /> */}
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
           <h2 className="font-bold font-cinzel text-wrap text-3xl px-8 md:p-0 lg:text-4xl max-w-2xl">
             Our services
@@ -110,7 +99,7 @@ const Services2 = () => {
         </div>
       </div>
 
-      <div className="max-lg:hidden flex sticky px-10 bottom-10 justify-between items-end">
+      {/* <div className="max-lg:hidden flex sticky px-10 bottom-10 justify-between items-end">
         <a
           href="#about"
           className="sticky font-bold text-neutral-100 text-4xl left-0 bottom-10 z-10"
@@ -200,7 +189,7 @@ const Services2 = () => {
             </g>
           </svg>
         </a>
-      </div>
+      </div> */}
     </motion.section>
   );
 };

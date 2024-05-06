@@ -149,8 +149,8 @@ body {
 }
 
 ::selection {
-  color: white !important; /* Text color of the selected text */
-  background: #4b4b4b !important; /* Background color of the selection */
+  color: rgb(0, 0, 0) !important; /* Text color of the selected text */
+  background: #8d8d8d !important; /* Background color of the selection */
 }
 
 @media only screen and (min-width: 1025px) {

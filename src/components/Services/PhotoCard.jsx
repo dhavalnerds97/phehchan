@@ -5,7 +5,7 @@ const PhotoCard = ({ service, isOdd }) => {
         isOdd ? "md:flex-row-reverse " : ""
       }`}
     >
-      <div className=" md:flex-1 shadow-xl md:w-2/3 rounded-xl lg:mt-6 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none lg:w-full lg:mb-6 lg:px-5 lg:pt-5 lg:pb-5">
+      <div className="md:flex-1 h-full shadow-xl p-4 md:w-2/3 rounded-xl lg:mt-6 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none w-full lg:mb-6 lg:px-5 lg:pt-5 lg:pb-5">
         <img
           className="h-64 w-full object-cover lg:hidden object-center mt-2 rounded-lg shadow-2xl"
           src={service.imgURL}
@@ -19,7 +19,7 @@ const PhotoCard = ({ service, isOdd }) => {
           {service.description}
         </h1>
       </div>
-      <div className="hidden relative lg:block md:w-1/3 md:flex-1">
+      <div className="hidden relative lg:block w-full h-auto md:w-1/3 md:flex-1">
         <img
           className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500"
           src={service.imgURL}

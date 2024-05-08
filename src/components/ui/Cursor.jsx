@@ -30,7 +30,8 @@ function useEventListener(eventName, handler, element = document) {
  */
 
 function AnimatedCursor({
-  color = "255, 137, 17",
+  // color = "255, 137, 17",
+  color = "212, 183, 103",
   outerAlpha = 0.4,
   innerSize = 8,
   outerSize = 30,

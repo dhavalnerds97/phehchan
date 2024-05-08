@@ -23,7 +23,7 @@ const ApproachObjCapab = () => {
         <Approach />
       </div>
       <div className="flex place-content-center bg-cover object-center">
-        <img src="img2.png" alt="" />
+        <img src="img50.png" alt="" />
       </div>
     </motion.section>
   );

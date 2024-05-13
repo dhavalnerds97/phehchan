@@ -59,10 +59,10 @@ function NavBar() {
 
   return (
     <div
-      className=" flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30"
+      className=" flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30 shadow-md"
       style={{
-        backdropFilter: "blur(8px)",
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        backdropFilter: "blur(16px)",
+        backgroundColor: "rgba(23, 23, 23, 0.8)",
       }}
     >
       <div className="flex h-20 py-3">

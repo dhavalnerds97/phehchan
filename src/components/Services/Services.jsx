@@ -60,7 +60,7 @@ const Services = () => {
       transition={{ delay: 0.175 }}
       id="method"
     >
-      <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  sm:justify-between items-center lg:flex-row ">
+      <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col md:pt-32 sm:justify-between items-center lg:flex-row ">
         <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Our Principles
         </h2>

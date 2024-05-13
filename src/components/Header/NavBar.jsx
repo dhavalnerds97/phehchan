@@ -6,7 +6,7 @@ import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.svg";
 import BLACK_LOGO from "../../assets/Phehchan-black-logo.svg";
 import WHITE_LOGO from "../../assets/Phehchan-white-logo.svg";
 import { useTheme } from "../../utils/ThemeContext";
-import ToggleTheme from "../ui/ToggleTheme";
+
 import { useActiveSectionContext } from "../../utils/active-section-context";
 
 const navItems = [
@@ -59,10 +59,10 @@ function NavBar() {
 
   return (
     <div
-      className="bg-transparent flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30"
+      className=" flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30"
       style={{
         backdropFilter: "blur(8px)",
-        backgroundColor: "rgba(255, 255, 255, 0)",
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
       }}
     >
       <div className="flex h-20 py-3">

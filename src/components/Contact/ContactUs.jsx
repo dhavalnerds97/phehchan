@@ -47,7 +47,7 @@ const ContactUs = () => {
   };
   return (
     <div className="w-full text-wrap">
-      <div className="flex h-auto p-2 py-8 ">
+      <div className="flex h-auto p-2 py-4 ">
         <div className="bg-amber-500 w-1"></div>
         <div className="pl-[20px] text-gray-100">
           <p className="text-4xl pt-2 font-urbanist pb-4">
@@ -59,7 +59,7 @@ const ContactUs = () => {
         </div>
       </div>
       <form className="lg:max-w-sm " onSubmit={handleSubmit}>
-        <div className="flex flex-col mb-5 p-2">
+        <div className="flex flex-col mb-3 p-2">
           <label
             htmlFor="name"
             className="ps-1 font-nunito  text-gray-100 text-lg "
@@ -75,7 +75,7 @@ const ContactUs = () => {
             className=" bg-neutral-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
           />
         </div>
-        <div className="flex flex-col mb-5 p-2">
+        <div className="flex flex-col mb-3 p-2">
           <label
             htmlFor="email"
             className="ps-1 font-nunito  text-gray-100 text-lg "
@@ -91,7 +91,7 @@ const ContactUs = () => {
             className=" bg-neutral-900 font-slab focus:outline-none w-full h-6 px-3 py-5 text-lg text-gray-100 border-slate-400 focus:border-amber-500 ease-in-out transition-all duration-700"
           />
         </div>
-        <div className="flex flex-col mb-5 p-2">
+        <div className="flex flex-col mb-3 p-2">
           <label
             htmlFor="contact"
             className="ps-1 font-nunito text-gray-100 text-lg"
@@ -109,7 +109,7 @@ const ContactUs = () => {
             title="Contact number must be at least 8 digits long"
           />
         </div>
-        <div className="flex flex-col mb-5 p-2">
+        <div className="flex flex-col mt-3 mb-3 p-2">
           <button className="px-12 py-3 border-2 border-white bg-neutral-900 text-neutral-100 font-bold font-nunito hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300">
             Submit
           </button>

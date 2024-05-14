@@ -5,7 +5,7 @@ const PlayBack = forwardRef((props, ref) => {
     <div className="text-neutral-100 w-screen h-screen flex items-center justify-center bg-center object-cover">
       <video
         ref={ref}
-        className="sm:object-cover object-fill max-w-6xl bg-cover sm:max-w-full sm:w-full h-full"
+        className="sm:object-cover object-fill max-w-5xl bg-cover sm:max-w-full sm:w-full h-full"
         src="/phehchan.mp4"
         muted
         autoPlay

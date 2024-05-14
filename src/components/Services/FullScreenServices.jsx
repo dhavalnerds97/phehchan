@@ -40,7 +40,7 @@ const FullScreenServices = () => {
   return (
     <motion.section
       ref={ref}
-      className="w-full h-full flex flex-col gap-6 lg-md:gap-12 xl:flex-row xl:gap-1"
+      className="w-full h-full flex flex-col gap-6 lg-md:gap-12 xl:flex-row xl:gap-1 pb-4 lg:pt-20"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

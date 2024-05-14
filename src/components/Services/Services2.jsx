@@ -33,7 +33,7 @@ const Services2 = () => {
         }`}
       >
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
-          <h2 className="font-bold font-cinzel text-wrap text-3xl px-8 md:p-0 lg:text-4xl max-w-2xl">
+          <h2 className="font-bold font-cinzel text-wrap text-3xl px-8 md:p-0 lg:text-5xl max-w-2xl">
             Our services
           </h2>
           <h2

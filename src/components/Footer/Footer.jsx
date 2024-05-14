@@ -30,7 +30,7 @@ const Footer = () => {
             />
             {/* <p className=" lg:block hidden my-4">
               <span className="font-bold">Address: </span> 511, 5th Floor, SNS
-              Platina, nr. Someshwara Enclave, Someshwara Enclave, Vesu, Surat,
+              Platina, nr. Someshwara Enclave, Vesu, Surat,
               Gujarat 395007
             </p> */}
 
@@ -46,8 +46,7 @@ const Footer = () => {
         <div className="flex flex-col">
           <p className="block my-4">
             <span className="font-bold">Address: </span> 511, 5th Floor, SNS
-            Platina, nr. Someshwara Enclave, Someshwara Enclave, Vesu, Surat,
-            Gujarat 395007
+            Platina, nr. Someshwara Enclave, Vesu, Surat, Gujarat 395007
           </p>
           <div className="flex my-4">
             <a

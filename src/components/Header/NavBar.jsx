@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../App.css";
 import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.svg";
 import BLACK_LOGO from "../../assets/Phehchan-black-logo.svg";
@@ -35,7 +35,8 @@ const navItems = [
 function NavBar() {
   const [menu, setMenu] = useState(false);
   const { darkMode } = useTheme();
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -121,6 +122,7 @@ function NavBar() {
             initial={{ x: "-100%" }}
             animate={{ x: "0%" }}
             exit={{ x: "-100%" }}
+            onClick={alterMenu}
             className={`md:hidden md:space-x-4 py-4 font-semibold divide-y-2 shadow-md  text-lg absolute top-full w-full left-0 px-5 ${
               darkMode
                 ? " text-neutral-100 bg-neutral-900"
@@ -130,11 +132,16 @@ function NavBar() {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={item.hash}
+                href={`${
+                  location.pathname == "/" ? item.hash : "/" + item.hash
+                }`}
                 className="py-2 block"
                 onClick={(e) => {
                   setActiveSection(item.name);
                   setTimeOfLastClick(Date.now());
+                  location == "/"
+                    ? navigate(item.hash)
+                    : navigate("/" + item.hash);
                   handleScroll(e);
                 }}
               >
@@ -160,12 +167,16 @@ function NavBar() {
             animate={{ y: 0, opacity: 1 }}
           >
             <a
-              href={item.hash}
+              href={`${location.pathname == "/" ? item.hash : "/" + item.hash}`}
               className="py-2 item-hover "
               data-text={item.dataText}
               onClick={(e) => {
                 setActiveSection(item.name);
                 setTimeOfLastClick(Date.now());
+                location == "/"
+                  ? navigate(item.hash)
+                  : navigate("/" + item.hash);
+
                 handleScroll(e);
               }}
             >

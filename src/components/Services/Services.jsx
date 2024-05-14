@@ -60,11 +60,13 @@ const Services = () => {
       transition={{ delay: 0.175 }}
       id="method"
     >
-      <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col md:pt-32 sm:justify-between items-center lg:flex-row ">
+      <div className="lg:pb-8 pb-6 gap-4 flex flex-col md:pt-32 sm:justify-between items-center sm:flex-row ">
         <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
           Our Principles
         </h2>
-        <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
+        <a href="#contact">
+          <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
+        </a>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6 ">
         {principles.map((item, index) => (

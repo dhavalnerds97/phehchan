@@ -7,7 +7,7 @@ const PrimaryButton = ({ children, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="px-6 py-1.5 border font-quicksand border-black text-neutarl-700 font-semibold hover:shadow-[4px_4px_0px_0px_rgba(100,100,100)] transition duration-300"
+      className="px-6 py-1.5 border font-quicksand border-amber-300 text-neutarl-700 font-semibold hover:shadow-[4px_4px_0px_0px_rgba(255,215,0)] transition duration-300"
     >
       {children}
     </button>

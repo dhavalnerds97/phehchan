@@ -1,8 +1,5 @@
 import { useActiveSectionContext } from "../../utils/active-section-context";
 import { useSectionInView } from "../../utils/useSectionInView";
-import Footer from "../Footer/Footer";
-import Services from "../Services/Services";
-import Team from "../Team/Team";
 import ApproachObjCapab from "./ApproachObjCapab";
 import WhyUs from "./WhyUs";
 import { motion } from "framer-motion";

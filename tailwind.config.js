@@ -12,6 +12,7 @@ export default {
         salsa: ["Salsa", "sans-serif"],
         sofia: ["Sofia", "Rubik", "sans-serif"],
         gloria: ["Gloria Hallelujah", "sans-serif"],
+        cinzel2: ["seasons", "Rubik", "sans-serif"],
         cinzel: ["Cinzel", "Rubik", "sans-serif"],
         poppins: ["Poppins", "Rubik", "sans-serif"],
         urbanist: ["Urbanist", "Questrial", "sans-serif"],
@@ -37,6 +38,8 @@ export default {
         playfair: ["Playfair Display", "Lora", "serif"],
         yeseva: ["Yeseva One", "Lora", "serif"],
         georgia: ["Bodoni Moda", "Lora", "serif"],
+        seasons: ["seasons", "serif"],
+        ogg: ["ogg", "serif"],
         // Add other fonts here as needed
       },
       screens: {

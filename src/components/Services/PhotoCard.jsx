@@ -1,10 +1,13 @@
+import RevealCover from "../ui/motion";
+
 const PhotoCard = ({ service, isOdd }) => {
   return (
     <div
-      className={`sm:mb-4 flex flex-col md:flex-row overflow-hidden text-wrap h-fit text-gray-50 border border-neutral-700 rounded-xl shadow-lg shadow-neutral-800 hover:shadow-xl hover:shadow-neutral-700/50 lg:h-full w-full group ${
+      className={`sm:mb-4 flex flex-col md:flex-row relative overflow-hidden text-wrap h-fit text-gray-50 border border-neutral-700 rounded-xl hover:shadow-lg hover:shadow-neutral-700/50 lg:h-full transition-all w-full group ${
         isOdd ? "md:flex-row-reverse " : ""
       }`}
     >
+      <RevealCover />
       <div className="md:flex-1 h-full shadow-xl p-4 md:w-2/3 rounded-xl lg:mt-6 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none w-full lg:mb-6 lg:px-5 lg:pt-5 lg:pb-5">
         <img
           className="h-64 w-full object-cover block lg:hidden object-center mt-2 rounded-lg shadow-2xl"

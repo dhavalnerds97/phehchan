@@ -68,6 +68,65 @@
   top: -2.75em;
 }
 
+.reveal_cover {
+  background-color: #171717;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  transform-origin: top;
+  top: 0;
+}
+
+.slide__in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fcd043;
+  width: 100vw;
+  height: 100vh;
+  transform-origin: bottom;
+  z-index: 14;
+}
+
+.slide__out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fcd043;
+  width: 100vw;
+  height: 100vh;
+  transform-origin: top;
+  z-index: 14;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  color: rgba(255, 252, 246, 0.12);
+  font-family: Miracle;
+  font-size: 6.25rem;
+  font-weight: 400;
+  line-height: 7.5rem;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: flex;
+  margin-right: 30px;
+}
+
 /* * {
   cursor: none;
 } */

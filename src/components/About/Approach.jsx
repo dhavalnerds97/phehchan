@@ -1,8 +1,10 @@
+import TextMask from "../ui/TextMask";
+
 const Approach = () => {
   return (
     <div className="text-wrap">
-      <h2 className="text-2xl lg:text-3xl py-4 font-cinzel font-semibold">
-        Approach
+      <h2 className="text-3xl sm:text-4xl py-4 font-cinzel font-semibold">
+        <TextMask>{["Approach"]}</TextMask>
       </h2>
       <p className="pb-2">
         Marketing and Advertising are based on one thing and one thing only:

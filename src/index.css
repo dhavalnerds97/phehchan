@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
+
+@font-face {
+  font-family: "seasons";
+  src: url("../public/fonts/TheSeasonsBold.ttf");
+}
+@font-face {
+  font-family: "ogg";
+  src: url("../public/fonts/Ogg-Regular.woff2");
+}

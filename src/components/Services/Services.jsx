@@ -2,6 +2,7 @@ import { useTheme } from "../../utils/ThemeContext";
 import { useActiveSectionContext } from "../../utils/active-section-context";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
+import TextMask from "../ui/TextMask";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
 
@@ -62,7 +63,7 @@ const Services = () => {
     >
       <div className="lg:pb-8 pb-6 gap-4 flex flex-col md:pt-32 sm:justify-between items-center sm:flex-row ">
         <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
-          Our Principles
+          <TextMask>{["Our Principles"]}</TextMask>
         </h2>
         <a href="#contact">
           <PrimaryButton>BOOK A DISCOVERY CALL</PrimaryButton>
@@ -75,7 +76,7 @@ const Services = () => {
       </div>
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
         <h2 className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl">
-          Our Process
+          <TextMask>{["Our Process"]}</TextMask>
         </h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 pb-6 ">

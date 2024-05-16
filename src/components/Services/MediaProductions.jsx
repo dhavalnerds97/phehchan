@@ -1,5 +1,6 @@
 import { useTheme } from "../../utils/ThemeContext";
 import { mediaProductions } from "../../utils/constants";
+import TextMask from "../ui/TextMask";
 import ProjectCard from "./PhotoCard";
 
 const MediaProductions = () => {
@@ -18,7 +19,7 @@ const MediaProductions = () => {
             id="media-production"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Media Productions
+            <TextMask>{["Media Productions"]}</TextMask>
           </h2>
           <p className="p-4">
             Tell your story in a way that resonates and engages. Our Media

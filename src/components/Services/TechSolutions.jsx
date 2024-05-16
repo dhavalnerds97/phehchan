@@ -1,6 +1,7 @@
 import { techSolutions } from "../../utils/constants";
 import ProjectCard from "./PhotoCard";
 import { useTheme } from "../../utils/ThemeContext";
+import TextMask from "../ui/TextMask";
 
 const TechSolutions = () => {
   const { darkMode } = useTheme();
@@ -18,7 +19,7 @@ const TechSolutions = () => {
             id="tech-solution"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Tech Solutions
+            <TextMask>{["Tech Solutions"]}</TextMask>
           </h2>
           <p className="p-4">
             In a digital-first world, staying ahead of technology trends isn't

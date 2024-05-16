@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 10rem;
+  letter-spacing: -0.8rem;
+  margin-top: 4rem;
+  height: 36vh;
+  padding-top: 16px;
+  animation: left-to-right 50s infinite linear;
+}
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .title {
+    font-size: 8rem;
+    height: 24vh;
+    letter-spacing: -0.5rem;
+    animation: left-to-right 30s infinite linear;
+  }
+}

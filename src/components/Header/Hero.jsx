@@ -2,6 +2,7 @@ import "../../App.css";
 import { useTheme } from "../../utils/ThemeContext";
 import FloatingImages from "../ui/FloatingImages";
 import { Example } from "../ui/MouseImageTrail";
+import TitleScroll from "../ui/titleScroll/page";
 
 const Hero = () => {
   const { darkMode } = useTheme();
@@ -16,6 +17,9 @@ const Hero = () => {
       }`}
     >
       <FloatingImages />
+      {/* <div className="block lg:hidden absolute overflow-hidden w-full bottom-0 left-0">
+        <TitleScroll />
+      </div> */}
     </main>
   );
 };

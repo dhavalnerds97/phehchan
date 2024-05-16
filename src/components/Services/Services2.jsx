@@ -7,6 +7,7 @@ import {
 } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
+import TextMask from "../ui/TextMask";
 import PhotoCard from "./PhotoCard";
 import ProjectCard from "./PhotoCard";
 import ServiceCard2 from "./ServiceCard2";
@@ -34,13 +35,13 @@ const Services2 = () => {
       >
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
           <h2 className="font-bold font-cinzel text-wrap text-3xl px-8 md:p-0 lg:text-5xl max-w-2xl">
-            Our services
+            <TextMask>{["Our services"]}</TextMask>
           </h2>
           <h2
             id="marketing-expertise"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Marketing Expertise
+            <TextMask>{["Marketing Expertise"]}</TextMask>
           </h2>
           <p className="p-4">
             In today's saturated markets, our tailored approach cuts through the
@@ -64,7 +65,7 @@ const Services2 = () => {
             id="media-production"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Media Productions
+            <TextMask>{["Media Productions"]}</TextMask>
           </h2>
           <p className="p-4">
             Tell your story in a way that resonates and engages. Our Media
@@ -88,7 +89,7 @@ const Services2 = () => {
             id="tech-solution"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Tech Solutions
+            <TextMask>{["Tech Solutions"]}</TextMask>
           </h2>
           <p className="p-4">
             In a digital-first world, staying ahead of technology trends isn't

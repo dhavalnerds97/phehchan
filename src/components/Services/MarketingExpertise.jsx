@@ -1,5 +1,6 @@
 import { useTheme } from "../../utils/ThemeContext";
 import { marketingExpertise } from "../../utils/constants";
+import TextMask from "../ui/TextMask";
 import ProjectCard from "./PhotoCard";
 
 const MarketingExpertise = () => {
@@ -18,7 +19,7 @@ const MarketingExpertise = () => {
             id="marketing-expertise"
             className="font-bold font-cinzel text-wrap text-2xl px-8 md:p-0 lg:text-4xl max-w-2xl"
           >
-            Marketing Expertise
+            <TextMask>{["Marketing Expertise"]}</TextMask>
           </h2>
           <p className="p-4">
             In today's saturated markets, our tailored approach cuts through the

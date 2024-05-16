@@ -1,5 +1,6 @@
 import { useTheme } from "../../utils/ThemeContext";
 import { useSectionInView } from "../../utils/useSectionInView";
+import { ImageDiv } from "../ui/motion";
 import Approach from "./Approach";
 import Capabilities from "./Capabilities";
 import { motion } from "framer-motion";
@@ -22,8 +23,10 @@ const ApproachObjCapab = () => {
         <Capabilities />
         <Approach />
       </div>
-      <div className="flex place-content-center bg-cover object-center">
-        <img src="img50.png" alt="" />
+      <div className="flex relative overflow-hidden place-content-center bg-cover object-center">
+        <ImageDiv>
+          <img src="img50.png" alt="" />
+        </ImageDiv>
       </div>
     </motion.section>
   );

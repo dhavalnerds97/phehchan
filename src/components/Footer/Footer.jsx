@@ -48,7 +48,7 @@ const Footer = () => {
             <span className="font-bold">Address: </span> 511, 5th Floor, SNS
             Platina, nr. Someshwara Enclave, Vesu, Surat, Gujarat 395007
           </p>
-          <div className="flex my-4">
+          <div className="flex my-4 socials">
             <a
               href="https://www.instagram.com/phehchan.brandsolutions/?igsh=MTZydTQ0cjdhd3RvNw%3D%3D"
               target="_blank"

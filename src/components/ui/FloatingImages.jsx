@@ -76,9 +76,11 @@ export default function FloatingImages() {
           {/* <h1 className="py-4 relative font-semibold font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent bg-gradient-to-b from-gray-50/80 to-gray-400/70 to-70% from-30% duration-1000"> */}
           {/* <h1 className="py-4 relative font-semibold font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent bg-gradient-to-r from-gray-200/70 via-gray-50 to-gray-200/70 duration-1000"> */}
           <h1 className="py-4 relative font-cinzel text-4xl md:text-5xl text-wrap transition-opacity bg-clip-text text-transparent  bg-gradient-to-b from-gray-50 to-gray-300/80 duration-1000">
-            <span className="font-semibold uppercase">Elevating Brands</span>
+            <span className="font-semibold uppercase tracking-tighter py-4">
+              Elevating Brands
+            </span>
             <br />
-            <span className="text-2xl font-semibold sm:text-3xl md:text-4xl">
+            <span className="text-2xl font-medium sm:text-3xl md:text-4xl ">
               Unleashing the Power of Creativity and Strategy to Drive
               Unforgettable Success.
             </span>

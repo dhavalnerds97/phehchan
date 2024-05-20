@@ -1,5 +1,4 @@
 import { useTheme } from "../../utils/ThemeContext";
-import { useSectionInView } from "../../utils/useSectionInView";
 import { ImageDiv } from "../ui/motion";
 import Approach from "./Approach";
 import Capabilities from "./Capabilities";

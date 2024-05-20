@@ -1,48 +1,11 @@
 import { useTheme } from "../../utils/ThemeContext";
 import { useActiveSectionContext } from "../../utils/active-section-context";
+import { principles, process } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
 import TextMask from "../ui/TextMask";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
-
-const process = [
-  {
-    title: "Kick-off",
-    description:
-      "Introduction and alignment to make sure you’re okay with how much we cost",
-    icon: "bx:bxs-briefcase",
-  },
-  {
-    title: "Concepts",
-    description:
-      "Present the output of our many, many brainstorm sessions and hope you don’t have major revision requests",
-  },
-  {
-    title: "Delivery & Execution",
-    description:
-      "Select one concept and refine into final delivery and then execute the same on multiple channels",
-    icon: "bx:bxs-data",
-  },
-];
-const principles = [
-  {
-    title: "Think",
-    description: "We spend majority of our time on the drawing board.",
-  },
-  {
-    title: "Create",
-    description: "Make it simple, but significant",
-  },
-  {
-    title: "Perform",
-    description: "Success comes from standing out, not fitting in",
-  },
-  {
-    title: "Optimize",
-    description: "If it's good, make it better",
-  },
-];
 
 const Services = () => {
   const { darkMode } = useTheme();

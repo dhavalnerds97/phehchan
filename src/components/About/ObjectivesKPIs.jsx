@@ -1,24 +1,4 @@
-const objectives = [
-  {
-    title: "Company Goal:",
-    description:
-      "To create a platform for schools to share stories ofinnovation, action and proactive behaviour, which could be adopted by others for creating a better world.",
-  },
-  {
-    title: "Marketing Goal:",
-    description:
-      "To create awareness about stories of humanism, change, impact and equitable world via a large platform, capable of enabling an exchange, build on the learning and have domino effectfor change.",
-  },
-  {
-    title: "Plan:",
-    description:
-      "Create targeted campaigns to break into new market segments to generate awareness amongst stakeholders.",
-  },
-  {
-    title: "KPI:",
-    description: "Impressions and Click-Through-Rate. ",
-  },
-];
+import { objectives } from "../../utils/constants";
 
 const ObjectivesKPIs = () => {
   return (

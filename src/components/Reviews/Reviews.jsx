@@ -1,32 +1,11 @@
 import { useTheme } from "../../utils/ThemeContext";
+import { testimonial } from "../../utils/constants";
 import ReviewCard from "./ReviewCard";
-
-const testimonial = [
-  {
-    title: "Phase 1",
-    lists: ["Brand Research and Analysis", "Creation of Launch Strategy"],
-  },
-  {
-    title: "Phase 2",
-    lists: [
-      "Curation of Content based on Final Strategy ",
-      "Execution",
-      "Optimisation",
-    ],
-  },
-  {
-    title: "Phase 3",
-    lists: [
-      "Research on Paid Media Strategy and Opportunities",
-      "Execution of Paid Media Strategy",
-    ],
-  },
-];
 
 const Reviews = () => {
   const { darkMode } = useTheme();
   return (
-    <div
+    <section
       className={`p-4 md:p-8 lg:p-16 bg-gradient-to-l flex flex-col xl:h-screen md:justify-center md:items-center ${
         darkMode
           ? "to-gray-900 from-slate-950 text-neutral-100"
@@ -43,7 +22,7 @@ const Reviews = () => {
           <ReviewCard key={index} data={item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

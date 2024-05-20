@@ -1,13 +1,5 @@
+import { capabilities } from "../../utils/constants";
 import TextMask from "../ui/TextMask";
-
-const capabilities = [
-  "User Research",
-  "Market Research",
-  "Brand Strategy & Positioning",
-  "Product & Service Strategy",
-  "Technology Strategy",
-  "ASCI Code Compliant Campaign Designing",
-];
 
 const Capabilities = () => {
   return (

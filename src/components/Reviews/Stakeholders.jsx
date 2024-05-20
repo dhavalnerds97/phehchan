@@ -1,38 +1,5 @@
 import { useTheme } from "../../utils/ThemeContext";
-
-const stakeholdersData = [
-  {
-    heading: "Principals",
-    channel: "LinkedIn and Emailers.",
-    title: "Forum",
-    description:
-      "IPNFoundation and Association ofIndian Principals (UNICEFs Partner organisation).",
-  },
-  {
-    heading: "Teachers",
-    channel: "LinkedIn.",
-    title: "Targeting",
-    description: "Based on Profession.",
-  },
-  {
-    heading: "Students",
-    channel: "Instagram + Youtube.",
-    title: "Targeting",
-    description: "Based on age.",
-  },
-  {
-    heading: "Parents",
-    channel: " Across all social media platforms, including Blogs and Youtube.",
-    title: "Targeting",
-    description: "Based on Age.",
-  },
-  {
-    heading: "Educational Institutions",
-    channel: "LinkedIn.",
-    title: "Targeting",
-    description: "Based on Profession",
-  },
-];
+import { stakeholdersData } from "../../utils/constants";
 
 const Stakeholders = () => {
   const { darkMode } = useTheme();

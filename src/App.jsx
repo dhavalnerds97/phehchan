@@ -102,7 +102,7 @@ const App = () => {
 
   return (
     <>
-      <motion.div
+      <motion.main
         className="xl:flex xl:overflow-x-auto xl:snap-mandatory xl:overflow-y-hidden xl:whitespace-nowrap xl:w-dvw xl:h-screen"
         onWheel={handleWheel}
         onKeyDown={handleKeyDown}
@@ -124,17 +124,17 @@ const App = () => {
           </motion.div>
         )}
         {removePlayback && (
-          <motion.div
+          <motion.header
             className="xl:flex-shrink-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <NavBar id="navbar" />
-          </motion.div>
+          </motion.header>
         )}
         <Outlet />
-      </motion.div>
+      </motion.main>
       <svg
         id="progress"
         width="30"

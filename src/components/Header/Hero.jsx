@@ -1,14 +1,15 @@
 import "../../App.css";
 import { useTheme } from "../../utils/ThemeContext";
 import FloatingImages from "../ui/FloatingImages";
-import { Example } from "../ui/MouseImageTrail";
-import TitleScroll from "../ui/titleScroll/page";
+import { Spotlight } from "../ui/Spotlight";
+import { Meteors } from "../ui/meteors";
+import { SparklesCore } from "../ui/sparkles";
 
 const Hero = () => {
   const { darkMode } = useTheme();
 
   return (
-    <main
+    <section
       id="hero"
       className={`flex h-screen justify-center md:h-screen items-center relative  transition duration-500  ${
         darkMode
@@ -16,11 +17,13 @@ const Hero = () => {
           : "bg-gray-50 text-slate-800"
       }`}
     >
+      <Spotlight
+        className="top-4 -left-10 md:-left-12 md:-top-20 h-screen hidden sm:block lg:hidden"
+        fill="white"
+      />
+      <Meteors number={25} />
       <FloatingImages />
-      {/* <div className="block lg:hidden absolute overflow-hidden w-full bottom-0 left-0">
-        <TitleScroll />
-      </div> */}
-    </main>
+    </section>
   );
 };
 

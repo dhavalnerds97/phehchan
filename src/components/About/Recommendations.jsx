@@ -1,32 +1,5 @@
 import { useTheme } from "../../utils/ThemeContext";
-
-const recommendationsData = [
-  {
-    title: "Search Engine Optimisation",
-    description:
-      "Access to right content at the right time can have a major impact in generating awareness amongst the stakeholders",
-  },
-  {
-    title: "Social Media Interactions and Postings.",
-    description:
-      "Constant Interaction is a key concept when it comes to engaging the end consumer. Podcasts, Reels etc can be a great tool to amplify reach.",
-  },
-  {
-    title: "Chameleon Mascot",
-    description:
-      "Logo along with a child mascot can have a major impact on success rates of the campaign, which can be translated into future campaigns to create synergy",
-  },
-  {
-    title: "Gamefication",
-    description:
-      "Tapping into the current digital audience and utilising the Million Pledges Arm to curate a digital badge to instil a sense of pride. Great tool for brand integration.",
-  },
-  {
-    title: "Emailer and Whatsapp Campaign",
-    description:
-      "Allows to reach the stakeholders in real time, makes targeted messaging easier and additionally, lets you stay in touch with your stakeholders",
-  },
-];
+import { recommendationsData } from "../../utils/constants";
 
 const Recommendations = () => {
   const { darkMode } = useTheme();

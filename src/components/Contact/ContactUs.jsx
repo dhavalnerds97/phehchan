@@ -46,7 +46,7 @@ const ContactUs = () => {
     }
   };
   return (
-    <div className="w-full text-wrap overflow-y-auto min-h-fit">
+    <section className="w-full text-wrap overflow-y-auto min-h-fit">
       <div className="flex h-auto p-2 py-4 ">
         <div className="bg-amber-500 w-1"></div>
         <div className="pl-[20px] text-gray-100">
@@ -130,7 +130,7 @@ const ContactUs = () => {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 

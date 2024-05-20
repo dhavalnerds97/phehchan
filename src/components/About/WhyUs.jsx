@@ -1,12 +1,12 @@
 import { useTheme } from "../../utils/ThemeContext";
 import TextMask from "../ui/TextMask";
-import RevealCover, { ImageDiv } from "../ui/motion";
+import { ImageDiv } from "../ui/motion";
 
 const WhyUs = () => {
   const { darkMode } = useTheme();
 
   return (
-    <div
+    <section
       id="why-us"
       className={`text-wrap p-8 lg:p-12 grid grid-cols-1 md:items-center md:grid-cols-2 md:gap-12 ${
         darkMode
@@ -41,7 +41,7 @@ const WhyUs = () => {
           solutions for our clients.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

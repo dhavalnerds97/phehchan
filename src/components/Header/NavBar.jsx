@@ -2,35 +2,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../App.css";
-import COLOUR_LOGO from "../../assets/Phehchan-colour-logo.svg";
 import BLACK_LOGO from "../../assets/Phehchan-black-logo.svg";
 import WHITE_LOGO from "../../assets/Phehchan-white-logo.svg";
 import { useTheme } from "../../utils/ThemeContext";
-
 import { useActiveSectionContext } from "../../utils/active-section-context";
-
-const navItems = [
-  {
-    name: "About Us",
-    hash: "#about",
-    dataText: "About Us",
-  },
-  {
-    name: "Method",
-    hash: "#method",
-    dataText: "Method",
-  },
-  {
-    name: "Services",
-    hash: "#services",
-    dataText: "Services",
-  },
-  {
-    name: "Contact Us",
-    hash: "#contact",
-    dataText: "Contact Us",
-  },
-];
+import { navItems } from "../../utils/constants";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -59,7 +35,7 @@ function NavBar() {
   };
 
   return (
-    <div
+    <nav
       className=" flex justify-between items-center md:space-x-5 px-4 md:px-8 lg:px-20 top-0 absolute w-screen left-0 z-30 shadow-md"
       style={{
         backdropFilter: "blur(16px)",
@@ -199,7 +175,7 @@ function NavBar() {
       {/* <div className="hidden md:block">
         <ToggleTheme />
       </div> */}
-    </div>
+    </nav>
   );
 }
 

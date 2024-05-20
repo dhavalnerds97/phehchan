@@ -1,31 +1,11 @@
 import { useTheme } from "../../utils/ThemeContext";
+import { TeamMembers } from "../../utils/constants";
 import Person from "./Person";
-
-const TeamMembers = [
-  {
-    name: "Apurv Mehraa",
-    title: "Co-Founder",
-    about:
-      "Co-founder of Mehra & Mehraa Legal LLP in Surat & Mumbai. Launched Advisory Services for the Advertising Standards Council of India. A decade-long content creator. Former Digital Marketing faculty at Auro University, Surat.",
-  },
-  {
-    name: "Axit Mehta",
-    title: "",
-    about:
-      "Passionate about crafting impactful narratives, merging romanticism with brand creativity. Eager to explore every facet of advertising, fueled by curiosity and perpetual growth. Balances social interactions with introspective cocooning.",
-  },
-  {
-    name: "Vaishali Bhargava",
-    title: "Lead Copywriter",
-    about:
-      "Passionate about crafting impactful narratives, merging romanticism with brand creativity. Eager to explore every facet of advertising, fueled by curiosity and perpetual growth. Balances social interactions with introspective cocooning.",
-  },
-];
 
 const Team = () => {
   const { darkMode } = useTheme();
   return (
-    <div
+    <section
       className={`p-4 md:p-8 lg:p-16 flex flex-col xl:h-screen md:justify-center md:items-center ${
         darkMode
           ? "bg-neutral-900 text-neutral-100"
@@ -42,7 +22,7 @@ const Team = () => {
           <Person key={index} data={item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

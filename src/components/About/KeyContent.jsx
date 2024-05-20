@@ -1,27 +1,5 @@
 import { useTheme } from "../../utils/ThemeContext";
-
-const keyContentData = [
-  {
-    title: "Project Information",
-    description:
-      "Access to right content at the right time can have a major impact in generating",
-  },
-  {
-    title: "Value Added Content",
-    description:
-      "Content that will add to or develop knowledge about a certain topic with regards to the SDGs",
-  },
-  {
-    title: "Inspirational Content",
-    description:
-      "Content that will uplift and provide encouragement to budding change makers/chameleons.",
-  },
-  {
-    title: "Testimonials",
-    description:
-      "Content that will provide value and credibility to the brand and its services",
-  },
-];
+import { keyContentData } from "../../utils/constants";
 
 const KeyContent = () => {
   const { darkMode } = useTheme();

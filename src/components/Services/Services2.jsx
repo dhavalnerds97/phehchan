@@ -1,16 +1,12 @@
 import { useTheme } from "../../utils/ThemeContext";
-import { useActiveSectionContext } from "../../utils/active-section-context";
 import {
   marketingExpertise,
   mediaProductions,
   techSolutions,
 } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
-import PrimaryButton from "../ui/PrimaryButton";
 import TextMask from "../ui/TextMask";
-import PhotoCard from "./PhotoCard";
 import ProjectCard from "./PhotoCard";
-import ServiceCard2 from "./ServiceCard2";
 import { motion } from "framer-motion";
 
 const Services2 = () => {

@@ -207,6 +207,10 @@ body {
   }
 }
 
+#about::-webkit-scrollbar {
+  width: 0;
+}
+
 ::selection {
   color: rgb(0, 0, 0) !important; /* Text color of the selected text */
   background: #c5c5c5 !important; /* Background color of the selection */

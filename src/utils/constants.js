@@ -164,17 +164,20 @@ export const services = [
 
 export const process = [
   {
+    id: "1",
     title: "Kick-off",
     description:
       "Introduction and alignment to make sure you’re okay with how much we cost",
     icon: "bx:bxs-briefcase",
   },
   {
+    id: "2",
     title: "Concepts",
     description:
       "Present the output of our many, many brainstorm sessions and hope you don’t have major revision requests",
   },
   {
+    id: "3",
     title: "Delivery & Execution",
     description:
       "Select one concept and refine into final delivery and then execute the same on multiple channels",
@@ -183,18 +186,22 @@ export const process = [
 ];
 export const principles = [
   {
+    id: "1",
     title: "Think",
     description: "We spend majority of our time on the drawing board.",
   },
   {
+    id: "2",
     title: "Create",
     description: "Make it simple, but significant",
   },
   {
+    id: "3",
     title: "Perform",
     description: "Success comes from standing out, not fitting in",
   },
   {
+    id: "4",
     title: "Optimize",
     description: "If it's good, make it better",
   },

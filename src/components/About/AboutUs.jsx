@@ -23,7 +23,7 @@ const AboutUs = () => {
   return (
     <motion.section
       ref={ref}
-      className="about-us-container relative w-full min-h-screen bg-neutral-700 overflow-auto"
+      className="about-us-container relative w-full min-h-screen bg-neutral-900 overflow-auto"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

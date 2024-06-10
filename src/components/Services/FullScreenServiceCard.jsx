@@ -4,7 +4,7 @@ import RevealCover, { ImageDiv } from "../ui/motion";
 const FullScreenServiceCard = ({ service, isOdd }) => {
   return (
     <div
-      className={`xl:h-full w-full lg-md:flex lg-md:items-center lg-md:px-12 lg-md:gap-4 pb-2 xl:w-[360px] ${
+      className={`xl:h-full w-full lg-md:flex lg-md:items-center cursor-pointer lg-md:px-12 lg-md:gap-4 pb-2 xl:w-[360px] ${
         isOdd ? "lg-md:flex-row-reverse " : ""
       }`}
     >

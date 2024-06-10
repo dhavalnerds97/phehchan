@@ -4,6 +4,7 @@ import { principles, process } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import PrimaryButton from "../ui/PrimaryButton";
 import TextMask from "../ui/TextMask";
+import HoverEffectCard from "./HoverEffectCard";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
 
@@ -34,7 +35,7 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6 ">
         {principles.map((item, index) => (
-          <ServiceCard key={index} data={item} />
+          <HoverEffectCard key={index} item={item} />
         ))}
       </div>
       <div className="lg:pb-8 pb-6 gap-4 flex max-sm:flex-col  lg:justify-between items-center lg:flex-row ">
@@ -44,7 +45,7 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 pb-6 ">
         {process.map((item, index) => (
-          <ServiceCard key={index} data={item} />
+          <HoverEffectCard key={index} item={item} />
         ))}
       </div>
     </motion.section>

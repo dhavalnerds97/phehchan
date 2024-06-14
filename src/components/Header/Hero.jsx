@@ -18,7 +18,7 @@ const Hero = () => {
       }`}
     >
       <Spotlight
-        className="top-4 -left-10 md:-left-12 md:-top-20 h-screen hidden sm:block lg:hidden"
+        className="top-4 -left-10 md:-left-12 md:-top-20 h-screen hidden  sm:block lg:hidden"
         fill="white"
       />
       <Meteors number={25} />

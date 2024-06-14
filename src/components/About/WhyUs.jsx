@@ -6,13 +6,13 @@ const WhyUs = () => {
   const { darkMode } = useTheme();
 
   return (
-    <div className=" bg-neutral-900">
-      <div className="h-12 lg:h-36 bg-neutral-900"></div>
+    <div className=" bg-neutral-500">
+      <div className="h-12 lg:h-44  bg-gradient-to-b from-neutral-700 to-neutral-500 lg:from-neutral-300"></div>
       <section
         id="why-us"
-        className={`text-wrap p-8 lg:p-12 grid grid-cols-1 md:items-center border-t border-neutral-800 overflow-hidden rounded-t-[2.5rem] sm:rounded-t-[3rem] md:grid-cols-2 md:gap-12 ${
+        className={`text-wrap p-8 lg:p-12 lg:-mt-12 grid grid-cols-1 md:items-center border-t border-neutral-800 overflow-hidden rounded-t-[2.5rem]  sm:rounded-t-[3rem] md:grid-cols-2 md:gap-12 ${
           darkMode
-            ? "bg-neutral-700/50 text-neutral-100"
+            ? "bg-neutral-800 text-neutral-100"
             : "bg-gray-50 text-slate-800"
         }`}
       >

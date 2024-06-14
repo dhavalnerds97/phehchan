@@ -23,7 +23,7 @@ const FullScreenServiceCard = ({ service, isOdd }) => {
           <TextMask>{service.title}</TextMask>
         </h2>
         <div className="my-3 w-24 border border-gray-400 "></div>
-        <p className="font-lato text font-light tracking-wide">
+        <p className="font-lato text font-light text-justify tracking-wide">
           {service.description}
         </p>
       </div>

@@ -10,7 +10,6 @@ const Body = () => {
       <section className="xl:w-screen xl:h-screen xl:flex-shrink-0">
         <Hero />
       </section>
-
       <section className="xl:w-9/12 xl:h-screen xl:snap-center xl:flex-shrink-0 overflow-auto">
         <AboutUs />
       </section>

@@ -9,9 +9,9 @@ const ApproachObjCapab = () => {
 
   return (
     <motion.section
-      className={`text-wrap p-8 lg:p-12 grid grid-cols-1 md:items-center md:grid-cols-2 border-b border-neutral-800 rounded-b-[2.5rem] lg:rounded-b-[3rem] md:gap-12 ${
+      className={`text-wrap lg:mb-16 mb-8 p-8 lg:p-12 grid grid-cols-1 md:items-center md:grid-cols-2 border-b border-neutral-800 rounded-b-[2.5rem] shadow-xl shadow-neutral-800 lg:rounded-b-[3rem] md:gap-12 ${
         darkMode
-          ? "bg-neutral-700/50 text-neutral-100"
+          ? "bg-neutral-800 text-neutral-100"
           : "bg-gray-50 text-slate-800"
       }`}
       initial={{ opacity: 0, y: 100 }}

@@ -2,6 +2,7 @@ import { useTheme } from "../../utils/ThemeContext";
 import { marketingExpertise } from "../../utils/constants";
 import TextMask from "../ui/TextMask";
 import ProjectCard from "./PhotoCard";
+import { PhotoServiceCard } from "./PhotoServiceCard";
 
 const MarketingExpertise = () => {
   const { darkMode } = useTheme();
@@ -35,7 +36,11 @@ const MarketingExpertise = () => {
         </div>
         <div className="grid grid-cols-1 gap-6 lg:max-w-3xl mx-auto pb-6 ">
           {marketingExpertise.map((item, index) => (
-            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
+            <PhotoServiceCard
+              key={index}
+              service={item}
+              isOdd={index % 2 !== 0}
+            />
           ))}
         </div>
       </div>

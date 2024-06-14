@@ -2,6 +2,7 @@ import { techSolutions } from "../../utils/constants";
 import ProjectCard from "./PhotoCard";
 import { useTheme } from "../../utils/ThemeContext";
 import TextMask from "../ui/TextMask";
+import { PhotoServiceCard } from "./PhotoServiceCard";
 
 const TechSolutions = () => {
   const { darkMode } = useTheme();
@@ -34,7 +35,11 @@ const TechSolutions = () => {
         </div>
         <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 gap-6 ">
           {techSolutions.map((item, index) => (
-            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
+            <PhotoServiceCard
+              key={index}
+              service={item}
+              isOdd={index % 2 !== 0}
+            />
           ))}
         </div>
       </div>

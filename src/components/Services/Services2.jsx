@@ -6,8 +6,10 @@ import {
 } from "../../utils/constants";
 import { useSectionInView } from "../../utils/useSectionInView";
 import TextMask from "../ui/TextMask";
+import PhotoCard from "./PhotoCard";
 import ProjectCard from "./PhotoCard";
 import { motion } from "framer-motion";
+import { PhotoServiceCard } from "./PhotoServiceCard";
 
 const Services2 = () => {
   const { ref } = useSectionInView("Services");
@@ -53,7 +55,11 @@ const Services2 = () => {
         </div>
         <div className="grid grid-cols-1 gap-6 lg:max-w-3xl mx-auto pb-6 ">
           {marketingExpertise.map((item, index) => (
-            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
+            <PhotoServiceCard
+              key={index}
+              service={item}
+              isOdd={index % 2 !== 0}
+            />
           ))}
         </div>
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
@@ -77,7 +83,11 @@ const Services2 = () => {
         </div>
         <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 gap-6 ">
           {mediaProductions.map((item, index) => (
-            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
+            <PhotoServiceCard
+              key={index}
+              service={item}
+              isOdd={index % 2 !== 0}
+            />
           ))}
         </div>
         <div className="lg:pb-8 pb-6 gap-4 flex flex-col lg:max-w-3xl mx-auto lg:text-center justify-center items-center ">
@@ -100,7 +110,11 @@ const Services2 = () => {
         </div>
         <div className="grid grid-cols-1 lg:max-w-3xl mx-auto pb-6 gap-6 ">
           {techSolutions.map((item, index) => (
-            <ProjectCard key={index} service={item} isOdd={index % 2 !== 0} />
+            <PhotoServiceCard
+              key={index}
+              service={item}
+              isOdd={index % 2 !== 0}
+            />
           ))}
         </div>
       </div>
